@@ -1,5 +1,6 @@
-import { Component, ElementRef } from '@angular/core';
-import {stagger, trigger, style, animate, AnimationBuilder, query, transition} from '@angular/animations';
+import { Component, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
+import { stagger, trigger, style, animate, AnimationBuilder, query, transition } from '@angular/animations';
+import { isPlatformBrowser } from '@angular/common';
 
 function checkVisible(elm) {
   var rect = elm.getBoundingClientRect();
@@ -13,16 +14,16 @@ const mouse = {
   _y: 0,
   x: 0,
   y: 0,
-  updatePosition: function(event) {
+  updatePosition: function (event) {
     var e = event || window.event;
     this.x = e.clientX - this._x;
     this.y = (e.clientY - this._y) * -1;
   },
-  setOrigin: function(e) {
+  setOrigin: function (e) {
     this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
     this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
   },
-  show: function() {
+  show: function () {
     return "(" + this.x + ", " + this.y + ")";
   }
 };
@@ -30,59 +31,64 @@ const mouse = {
 export const postsAnimation = query('.chapter', [
   style({ transform: 'translateY(100%)', opacity: 0 }),
   stagger(200, [
-  /* initial */
+    /* initial */
     style({ transform: 'translateY(100%)', opacity: 0 }),
     /* final */
     animate('1s cubic-bezier(.8, -0.6, 0.2, 1.5)', style({ transform: 'translateY(0)', opacity: 1 }))
-])]);
+  ])]);
 
 const getAnimation = (selector, time) => {
   return query(selector, [
-  style({ transform: 'translateY(100%)', opacity: 0 }),
-  stagger(time, [
-  /* initial */
     style({ transform: 'translateY(100%)', opacity: 0 }),
-    /* final */
-    animate('.6s cubic-bezier(.8, -0.6, 0.2, 1.5)', style({ transform: 'translateY(0)', opacity: 1 }))
-])])
+    stagger(time, [
+      /* initial */
+      style({ transform: 'translateY(100%)', opacity: 0 }),
+      /* final */
+      animate('.6s cubic-bezier(.8, -0.6, 0.2, 1.5)', style({ transform: 'translateY(0)', opacity: 1 }))
+    ])])
 }
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.scss' ],
+  styleUrls: ['./app.component.scss'],
   animations: [
     trigger('details', [
-  transition(':enter', [
-    /* initial */
-    style({ transform: 'translateY(100%)', opacity: 0 }),
-    /* final */
-    animate('1s cubic-bezier(.8, -0.6, 0.2, 1.5)', style({ transform: 'translateY(0)', opacity: 1 }))
-  ]),
-])
+      transition(':enter', [
+        /* initial */
+        style({ transform: 'translateY(100%)', opacity: 0 }),
+        /* final */
+        animate('1s cubic-bezier(.8, -0.6, 0.2, 1.5)', style({ transform: 'translateY(0)', opacity: 1 }))
+      ]),
+    ])
   ]
 })
-export class AppComponent  {
+export class AppComponent {
   name = 'Angular';
   animated = {};
   animatedDetails;
   animation = {
     '.chapters .book-cover img': {
       tag: '.chapter',
-      duration: 250},
+      duration: 250
+    },
     '.recommendations .container': {
-      tag: '.recommendations .container .flex-1'},
+      tag: '.recommendations .container .flex-1'
+    },
     '.benefits .anim': {
-      tag: '.benefit'},
+      tag: '.benefit'
+    },
     '.topics': {
-      tag: '.topics .flex-1', duration: 150},
+      tag: '.topics .flex-1', duration: 150
+    },
     '.justify-content-center': {
       tag: '.justify-content-center img',
-      duration: 50},
-      '.author': {
-        tag: '.author .author-animation',
-        duration: 250
-      }
+      duration: 50
+    },
+    '.author': {
+      tag: '.author .author-animation',
+      duration: 250
+    }
   }
   inner;
   selectedChapter: any = {};
@@ -94,7 +100,7 @@ export class AppComponent  {
   };
   startingStyle;
 
-  update = function(event) {
+  update = function (event) {
     mouse.updatePosition(event);
     this.updateTransformStyle(
       (mouse.y / this.inner.offsetHeight / 2).toFixed(2),
@@ -102,7 +108,7 @@ export class AppComponent  {
     );
   };
 
-  updateTransformStyle = function(x, y) {
+  updateTransformStyle = function (x, y) {
     var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
     this.inner.style.transform = style;
     this.inner.style.webkitTransform = style;
@@ -111,15 +117,15 @@ export class AppComponent  {
     this.inner.style.oTransform = style;
   };
 
-  onMouseEnterHandler = function(event) {
+  onMouseEnterHandler = function (event) {
     this.update(event);
   };
 
-  onMouseLeaveHandler = function() {
+  onMouseLeaveHandler = function () {
     this.inner.style = "";
   };
 
-  onMouseMoveHandler = function(event) {
+  onMouseMoveHandler = function (event) {
     if (this.isTimeToUpdate()) {
       this.update(event);
     }
@@ -279,30 +285,36 @@ export class AppComponent  {
     title: 'Bundle Analyzers'
   }]
 
-  constructor(private el: ElementRef, private animationBuilder: AnimationBuilder) {
+  constructor(private el: ElementRef, private animationBuilder: AnimationBuilder, @Inject(PLATFORM_ID) private platformId) {
 
   }
 
   ngOnInit() {
 
-    window.addEventListener('scroll', this.scrollEvent, true);
-    const colors = ['#e7692c','#df002a','#112b39'];
-var blobs = document.querySelectorAll("#background path");
+    if (isPlatformBrowser(this.platformId)) {
+      window.addEventListener('scroll', this.scrollEvent, true);
+    }
+    const colors = ['#e7692c', '#df002a', '#112b39'];
+    var blobs = document.querySelectorAll("#background path");
 
-blobs.forEach((blob: any) => {
-    blob.style.fill = colors[Math.floor(Math.random() * colors.length)];
-});
+    blobs.forEach((blob: any) => {
+      blob.style.fill = colors[Math.floor(Math.random() * colors.length)];
+    });
   }
 
   ngAfterViewInit() {
-    this.scrollEvent()
+    if (isPlatformBrowser(this.platformId)) {
+      this.scrollEvent();
+    }
     this.inner = this.el.nativeElement.querySelector(".book-cover img");
     const container = this.el.nativeElement.querySelector('.book-cover');
     mouse.setOrigin(container);
   }
 
   ngOnDestroy() {
-    window.removeEventListener('scroll', this.scrollEvent, true);
+    if (isPlatformBrowser(this.platformId)) {
+      window.removeEventListener('scroll', this.scrollEvent, true);
+    }
   }
 
   buildAnimation(selector, time = 500) {
@@ -328,7 +340,7 @@ blobs.forEach((blob: any) => {
         animate('.6s cubic-bezier(0.25, 0.8, 0.25, 1)', style({ top: 0, width: '100vw', height: '100vh', left: 0, borderRadius: 0 }))
       ])
     ])
-      this.animatedDetails = true;
+    this.animatedDetails = true;
 
     setTimeout(() => {
       details.classList.add('animated');
@@ -343,7 +355,7 @@ blobs.forEach((blob: any) => {
     const animation = this.animationBuilder.build([
       query('.details', [
         style({ top: 0, width: '100vw', height: '100vh', left: 0, borderRadius: 0 }),
-        animate('.6s ease', style({...this.startingStyle, borderRadius: '6px'}))
+        animate('.6s ease', style({ ...this.startingStyle, borderRadius: '6px' }))
       ])
     ])
     details.classList.remove('animated');
@@ -358,10 +370,10 @@ blobs.forEach((blob: any) => {
   }
 
   scrollEvent = (): void => {
-    Object.keys(this.animation).forEach((key)=> {
+    Object.keys(this.animation).forEach((key) => {
       const isVisible = checkVisible(this.el.nativeElement.querySelector(key));
       if (isVisible && !this.animated[key]) {
-        this.animated[key]= true;
+        this.animated[key] = true;
         const animation = this.buildAnimation(this.animation[key].tag, this.animation[key].duration);
         animation.create(this.el.nativeElement).play();
       }

@@ -1,15 +1,380 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="utf-8">
-  <title>Angularprojects</title>
-  <base href="/angularprojects/">
+  <title>Angular Projects - Packt Publishing - Zama Khan Mohammed</title>
+  <meta name="description" content="Angular Projects is a compilation of Nine professional applications exploring Angular with TypeScript, Ionic, Firebase, and more. The book starts of with basic Angular Project, and then goes on to create a Single Page Application Blog using Angular Router and Wordpress API.">
+  <base href="/">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i" rel="stylesheet">  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="styles.8f95679a1318f70ad6d4.css"></head>
-<body>
-  <app-root></app-root>
-<script src="runtime-es2015.7c2c8ed53c732cae9756.js" type="module"></script><script src="polyfills-es2015.a6ce4f82ff4bffeb08e9.js" type="module"></script><script src="runtime-es5.f8b20787b3edb94bf0b5.js" nomodule></script><script src="polyfills-es5.881367718815cb699bcd.js" nomodule></script><script src="main-es2015.5bbecfa4439ac55ccb71.js" type="module"></script><script src="main-es5.a89ff2cf444036505819.js" nomodule></script></body>
-</html>
+<link rel="stylesheet" href="styles.a3116442b4b397ba8828.css"><style ng-transition="serverApp">@charset "UTF-8";
+.container[_ngcontent-sc0] {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.container[_ngcontent-sc0]::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.buttons[_ngcontent-sc0] {
+  display: flex;
+}
+.buttons[_ngcontent-sc0]   button[_ngcontent-sc0] {
+  flex: 1;
+  font-size: 18px;
+}
+.book[_ngcontent-sc0] {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.packt-logo[_ngcontent-sc0] {
+  width: 63px;
+  margin-right: 20px;
+  height: 25px;
+}
+.about[_ngcontent-sc0] {
+  padding: 10px;
+}
+.light-gray[_ngcontent-sc0] {
+  color: #a8a8a8;
+}
+nav[_ngcontent-sc0]   a[_ngcontent-sc0] {
+  margin-right: 10px;
+  color: white;
+}
+.padding-tb-30[_ngcontent-sc0] {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.chapter[_ngcontent-sc0], .chapter-in-details[_ngcontent-sc0] {
+  background: white;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  box-shadow: 0 10px 20px 0 rgba(116, 103, 91, 0.059);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.book-cover[_ngcontent-sc0] {
+  order: -1;
+  text-align: center;
+  -webkit-perspective: 100px;
+          perspective: 100px;
+}
+.packt-publishing[_ngcontent-sc0]   img[_ngcontent-sc0] {
+  display: none;
+}
+.book-cover[_ngcontent-sc0]   img[_ngcontent-sc0] {
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+@media (min-width: 500px) {
+  .packt-publishing[_ngcontent-sc0]   div[_ngcontent-sc0] {
+    display: inline;
+  }
+
+  .packt-publishing[_ngcontent-sc0]   img[_ngcontent-sc0] {
+    display: inline;
+  }
+
+  .chapter[_ngcontent-sc0] {
+    width: 90%;
+  }
+
+  .book-cover[_ngcontent-sc0] {
+    order: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+
+  .right[_ngcontent-sc0]   .chapter[_ngcontent-sc0] {
+    float: right;
+  }
+
+  .book-cover[_ngcontent-sc0]   img[_ngcontent-sc0] {
+    width: 100%;
+    position: relative;
+    top: 70px;
+  }
+}
+.chapter[_ngcontent-sc0]:hover {
+  box-shadow: 0 10px 25px 0 rgba(116, 103, 91, 0.3);
+  background: #e7692c;
+  color: white;
+}
+.number[_ngcontent-sc0] {
+  margin-right: 20px;
+}
+.title[_ngcontent-sc0] {
+  font-size: 14px;
+  margin-right: 10px;
+}
+.round-img[_ngcontent-sc0] {
+  border-radius: 50%;
+  text-align: center;
+}
+.round-img[_ngcontent-sc0]   img[_ngcontent-sc0] {
+  border-radius: 290486px;
+  width: 50%;
+  margin: 30px;
+}
+.left[_ngcontent-sc0] {
+  float: left;
+}
+.right[_ngcontent-sc0] {
+  float: right;
+}
+.justify-content-center[_ngcontent-sc0] {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-content-center[_ngcontent-sc0]   img[_ngcontent-sc0] {
+  margin-right: 30px;
+  margin-top: 20px;
+}
+.white-bg[_ngcontent-sc0] {
+  background: white;
+}
+.benefits[_ngcontent-sc0]   .orange[_ngcontent-sc0]   div[_ngcontent-sc0] {
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  margin-left: 10px;
+}
+.orange[_ngcontent-sc0] {
+  color: #e7692c;
+}
+.landing-title[_ngcontent-sc0] {
+  margin-top: 0;
+}
+.landing-title[_ngcontent-sc0]:after {
+  top: 0;
+  left: 0;
+  position: relative;
+  width: 35px;
+  height: 2px;
+  display: inherit;
+  background-color: #e7692c;
+  content: "";
+  left: 50%;
+  margin-top: 17px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.content[_ngcontent-sc0]   .landing-title[_ngcontent-sc0]:after {
+  background-color: #000;
+}
+.orange-bg[_ngcontent-sc0] {
+  background: #e7692c;
+  color: white;
+}
+.orange-bg[_ngcontent-sc0]   a[_ngcontent-sc0] {
+  color: white;
+}
+.small-img[_ngcontent-sc0]   img[_ngcontent-sc0] {
+  width: 40px;
+  margin: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  top: 10px;
+}
+.logo-title[_ngcontent-sc0] {
+  position: relative;
+  top: -3px;
+  margin: 0;
+}
+nav[_ngcontent-sc0]   .left[_ngcontent-sc0] {
+  display: flex;
+}
+section[_ngcontent-sc0] {
+  padding-bottom: 50px;
+  margin-top: 50px;
+  padding-top: 1px;
+}
+.italic[_ngcontent-sc0] {
+  font-style: italic;
+}
+blockquote[_ngcontent-sc0] {
+  padding-top: 20px;
+}
+blockquote[_ngcontent-sc0]:before {
+  color: #ccc;
+  content: "“";
+  font-size: 5em;
+  line-height: 0em;
+  margin-right: 0.1em;
+  vertical-align: -0.4em;
+}
+.quote[_ngcontent-sc0] {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 30px 20px 0 rgba(116, 103, 91, 0.059);
+  padding-bottom: 20px;
+  border: 1px solid transparent;
+}
+.quote[_ngcontent-sc0]:hover {
+  box-shadow: none;
+  border: 1px solid #e7692c;
+}
+.details[_ngcontent-sc0] {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  background: #e7692c;
+  color: white;
+}
+.details[_ngcontent-sc0]   .chapter-in-details[_ngcontent-sc0] {
+  width: 100%;
+  box-shadow: none;
+  color: #000;
+  border-radius: 0;
+  border-bottom: 2px solid #000;
+  margin-bottom: 0;
+}
+.chapter-in-details[_ngcontent-sc0]   .title[_ngcontent-sc0] {
+  margin-right: 30px;
+}
+.details.animated[_ngcontent-sc0]   .content[_ngcontent-sc0] {
+  overflow: auto;
+  height: calc(100vh - 100px);
+}
+.details.animated[_ngcontent-sc0]   .title[_ngcontent-sc0] {
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-size: 18px;
+}
+.details.animated[_ngcontent-sc0]   .number[_ngcontent-sc0] {
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-size: 32px;
+}
+.close-btn[_ngcontent-sc0] {
+  background: transparent;
+  outline: none;
+  position: absolute;
+  right: 0;
+  display: none;
+}
+.animated[_ngcontent-sc0]   .close-btn[_ngcontent-sc0] {
+  display: block;
+}
+.details.animating[_ngcontent-sc0] {
+  display: block;
+}
+
+.ng-proj-title[_ngcontent-sc0] {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  height: 75px;
+  width: 305px;
+}
+.filled-heading[_ngcontent-sc0] {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Poppins", "Helvetica Neue", Arial, Helvetica, Verdana;
+  font-size: 2em;
+  line-height: 0.5;
+  text-align: center;
+}
+@media (min-width: 500px) {
+  .ng-proj-title[_ngcontent-sc0] {
+    height: 75px;
+    width: 459px;
+  }
+
+  .filled-heading[_ngcontent-sc0] {
+    font-size: 3em;
+    line-height: 0.5;
+  }
+}
+
+#background[_ngcontent-sc0]   path[_ngcontent-sc0] {
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+#background[_ngcontent-sc0]   path[_ngcontent-sc0]:nth-of-type(2n) {
+  -webkit-animation: rotate 5s linear infinite;
+          animation: rotate 5s linear infinite;
+}
+#background[_ngcontent-sc0]   path[_ngcontent-sc0]:nth-of-type(2n + 1) {
+  animation: rotate 3s linear reverse infinite;
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.topics[_ngcontent-sc0]   img[_ngcontent-sc0] {
+  width: 45px;
+}
+.topic[_ngcontent-sc0] {
+  flex: 100px;
+  text-align: center;
+}
+.benefits[_ngcontent-sc0], .topics[_ngcontent-sc0] {
+  text-align: center;
+}
+[data-tooltip][_ngcontent-sc0]:before {
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 5px;
+  -webkit-transform: translate(-50%, 10px);
+          transform: translate(-50%, 10px);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+[data-tooltip][_ngcontent-sc0]:after {
+  opacity: 0;
+  pointer-events: none;
+  font-size: 12px !important;
+  background: #e7692c;
+  border-radius: 4px;
+  color: #fff;
+  content: attr(data-tooltip);
+  padding: 0.5em 1em;
+  position: absolute;
+  z-index: 10;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 11px;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  white-space: normal;
+  width: 300px;
+  line-height: 20px;
+  font-size: 14px;
+}
+[data-tooltip][_ngcontent-sc0]:hover:after {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwiL1VzZXJzL2Fpc2hhaG1vaGFtZWQvYW5ndWxhcnByb2plY3RzL3NyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGdCQUFnQjtBQ0NoQjtFQUNFLGlCQUFBO0VBQ0EsY0FBQTtFQUNBLGFBQUE7QURDRjtBQ0VBO0VBQ0UsV0FBQTtFQUNBLFdBQUE7RUFDQSxjQUFBO0FEQ0Y7QUNFQTtFQUNFLGFBQUE7QURDRjtBQ0VBO0VBQ0UsT0FBQTtFQUNBLGVBQUE7QURDRjtBQ0VBO0VBQ0UsY0FBQTtFQUNBLGdCQUFBO0FEQ0Y7QUNFQTtFQUNFLFdBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7QURDRjtBQ0VBO0VBQ0UsYUFBQTtBRENGO0FDRUE7RUFDRSxjQUFBO0FEQ0Y7QUNFQTtFQUNFLGtCQUFBO0VBQ0EsWUFBQTtBRENGO0FDRUE7RUFDRSxpQkFBQTtFQUNBLG9CQUFBO0FEQ0Y7QUNFQTs7RUFFRSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0EsbUJBQUE7RUFDQSxhQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsbURBQUE7RUFDQSx5QkFBQTtFQUNBLGVBQUE7QURDRjtBQ0VBO0VBQ0UsU0FBQTtFQUNBLGtCQUFBO0VBQ0EsMEJBQUE7VUFBQSxrQkFBQTtBRENGO0FDR0E7RUFDRSxhQUFBO0FEQUY7QUNHQTtFQUNJLGtDQUFBO0VBQUEsMEJBQUE7RUFBQSxrREFBQTtBREFKO0FDR0E7RUFDRTtJQUNFLGVBQUE7RURBRjs7RUNFQTtJQUNBLGVBQUE7RURDQTs7RUNDQztJQUNJLFVBQUE7RURFTDs7RUNBQztJQUNELFFBQUE7SUFDQSw2QkFBQTtZQUFBLHFCQUFBO0VER0E7O0VDREY7SUFDRSxZQUFBO0VESUE7O0VDREM7SUFDRyxXQUFBO0lBQ0Esa0JBQUE7SUFDQSxTQUFBO0VESUo7QUFDRjtBQ0RBO0VBQ0UsaURBQUE7RUFDQSxtQkFBQTtFQUNBLFlBQUE7QURHRjtBQ0FBO0VBQ0Usa0JBQUE7QURHRjtBQ0FBO0VBQ0UsZUFBQTtFQUNBLGtCQUFBO0FER0Y7QUNBQTtFQUNFLGtCQUFBO0VBQ0Esa0JBQUE7QURHRjtBQ0NBO0VBQ0UsdUJBQUE7RUFDQSxVQUFBO0VBQ0EsWUFBQTtBREVGO0FDQUE7RUFDRSxXQUFBO0FER0Y7QUNEQTtFQUNFLFlBQUE7QURJRjtBQ0RBO0VBQ0UsdUJBQUE7RUFDQSxhQUFBO0VBQ0EsZUFBQTtBRElGO0FDREE7RUFDRSxrQkFBQTtFQUNBLGdCQUFBO0FESUY7QUNEQTtFQUNFLGlCQUFBO0FESUY7QUNBQTtFQUNFLHFCQUFBO0VBQ0Esa0JBQUE7RUFDQSxVQUFBO0VBQ0EsaUJBQUE7QURHRjtBQ0RBO0VBQ0UsY0FBQTtBRElGO0FDREE7RUFDRSxhQUFBO0FESUY7QUNEQTtFQUNJLE1BQUE7RUFDQSxPQUFBO0VBQ0Esa0JBQUE7RUFDQSxXQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0VBQ0EseUJBQUE7RUFDQSxXQUFBO0VBQ0EsU0FBQTtFQUNBLGdCQUFBO0VBQ0EsbUNBQUE7VUFBQSwyQkFBQTtBRElKO0FDREE7RUFDRSxzQkFBQTtBRElGO0FDREE7RUFDRSxtQkFBQTtFQUNBLFlBQUE7QURJRjtBQ0RBO0VBQ0UsWUFBQTtBRElGO0FDREE7RUFDRSxXQUFBO0VBQ0EsU0FBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxrQkFBQTtFQUNBLFNBQUE7QURJRjtBQ0RBO0VBQ0Usa0JBQUE7RUFDQSxTQUFBO0VBQ0EsU0FBQTtBRElGO0FDREE7RUFDRSxhQUFBO0FESUY7QUNEQTtFQUNFLG9CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtBRElGO0FDREE7RUFDRSxrQkFBQTtBRElGO0FDREE7RUFDRSxpQkFBQTtBRElGO0FDREE7RUFDRSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGNBQUE7RUFDQSxnQkFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7QURJRjtBQ0FBO0VBQ0UsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLG1EQUFBO0VBQ0Esb0JBQUE7RUFDQSw2QkFBQTtBREdGO0FDQUE7RUFDRSxnQkFBQTtFQUNBLHlCQUFBO0FER0Y7QUNBQTtFQUNFLGFBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7RUFDQSxtQkFBQTtFQUNBLFlBQUE7QURHRjtBQ0FBO0VBQ0UsV0FBQTtFQUNBLGdCQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0VBQ0EsNkJBQUE7RUFDQSxnQkFBQTtBREdGO0FDQUE7RUFDRSxrQkFBQTtBREdGO0FDQUE7RUFDRSxjQUFBO0VBQ0EsMkJBQUE7QURHRjtBQ0FBO0VBQ0UsbURBQUE7RUFDQSxlQUFBO0FER0Y7QUNBQTtFQUNFLG1EQUFBO0VBQ0EsZUFBQTtBREdGO0FDQUE7RUFDRSx1QkFBQTtFQUNBLGFBQUE7RUFDQSxrQkFBQTtFQUNBLFFBQUE7RUFDQSxhQUFBO0FER0Y7QUNBQTtFQUNFLGNBQUE7QURHRjtBQ0FBO0VBQ0UsY0FBQTtBREdGO0FDQUEsa0JBQUE7QUFDQTtFQUNJLGNBQUE7RUFDQSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtBREdKO0FDQ0E7RUFDSSx5QkFBQTtFQUNBLGlCQUFBO0VBQ0EsbUVBQUE7RUFDQSxjQUFBO0VBQ0EsZ0JBQUE7RUFDQSxrQkFBQTtBREVKO0FDQ0E7RUFDRTtJQUNFLFlBQUE7SUFDQSxZQUFBO0VERUY7O0VDQUY7SUFDSSxjQUFBO0lBQ0EsZ0JBQUE7RURHRjtBQUNGO0FDREEsa0NBQUE7QUFDQTtFQUNJLGlDQUFBO1VBQUEseUJBQUE7RUFDQSx1QkFBQTtBREdKO0FDREE7RUFDSSw0Q0FBQTtVQUFBLG9DQUFBO0FESUo7QUNGQTtFQUNJLDRDQUFBO0FES0o7QUNGQTtFQUNJO0lBQUssNEJBQUE7WUFBQSxvQkFBQTtFRE1QO0VDTEU7SUFBTyxpQ0FBQTtZQUFBLHlCQUFBO0VEUVQ7QUFDRjtBQ1hBO0VBQ0k7SUFBSyw0QkFBQTtZQUFBLG9CQUFBO0VETVA7RUNMRTtJQUFPLGlDQUFBO1lBQUEseUJBQUE7RURRVDtBQUNGO0FDTEE7RUFDRSxXQUFBO0FET0Y7QUNKQTtFQUNFLFdBQUE7RUFDQSxrQkFBQTtBRE9GO0FDSkE7RUFDRSxrQkFBQTtBRE9GO0FDSkE7RUFDRSxZQUFBO0VBQ0EsU0FBQTtFQUNBLGtCQUFBO0VBQ0Esd0NBQUE7VUFBQSxnQ0FBQTtFQUNBLDZCQUFBO1VBQUEscUJBQUE7QURPRjtBQ0pBO0VBQ0ksVUFBQTtFQUNBLG9CQUFBO0VBQ0EsMEJBQUE7RUFDQSxtQkFBQTtFQUNBLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLDJCQUFBO0VBQ0Esa0JBQUE7RUFDQSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0VBQ0EsU0FBQTtFQUNBLG1CQUFBO0VBQ0EsNkJBQUE7VUFBQSxxQkFBQTtFQUNBLG1CQUFBO0VBQ0EsWUFBQTtFQUNBLGlCQUFBO0VBQ0EsZUFBQTtBRE9KO0FDSkE7RUFDRSxVQUFBO0VBQ0Esb0JBQUE7RUFDQSxxQ0FBQTtVQUFBLDZCQUFBO0FET0YiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAY2hhcnNldCBcIlVURi04XCI7XG4uY29udGFpbmVyIHtcbiAgbWF4LXdpZHRoOiAxMDAwcHg7XG4gIG1hcmdpbjogMCBhdXRvO1xuICBwYWRkaW5nOiAxMHB4O1xufVxuXG4uY29udGFpbmVyOjphZnRlciB7XG4gIGNvbnRlbnQ6IFwiXCI7XG4gIGNsZWFyOiBib3RoO1xuICBkaXNwbGF5OiB0YWJsZTtcbn1cblxuLmJ1dHRvbnMge1xuICBkaXNwbGF5OiBmbGV4O1xufVxuXG4uYnV0dG9ucyBidXR0b24ge1xuICBmbGV4OiAxO1xuICBmb250LXNpemU6IDE4cHg7XG59XG5cbi5ib29rIHtcbiAgbWFyZ2luOiAwIGF1dG87XG4gIG1hcmdpbi10b3A6IDUwcHg7XG59XG5cbi5wYWNrdC1sb2dvIHtcbiAgd2lkdGg6IDYzcHg7XG4gIG1hcmdpbi1yaWdodDogMjBweDtcbiAgaGVpZ2h0OiAyNXB4O1xufVxuXG4uYWJvdXQge1xuICBwYWRkaW5nOiAxMHB4O1xufVxuXG4ubGlnaHQtZ3JheSB7XG4gIGNvbG9yOiAjYThhOGE4O1xufVxuXG5uYXYgYSB7XG4gIG1hcmdpbi1yaWdodDogMTBweDtcbiAgY29sb3I6IHdoaXRlO1xufVxuXG4ucGFkZGluZy10Yi0zMCB7XG4gIHBhZGRpbmctdG9wOiAxMHB4O1xuICBwYWRkaW5nLWJvdHRvbTogMzBweDtcbn1cblxuLmNoYXB0ZXIsXG4uY2hhcHRlci1pbi1kZXRhaWxzIHtcbiAgYmFja2dyb3VuZDogd2hpdGU7XG4gIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgbWFyZ2luLWJvdHRvbTogMjVweDtcbiAgZGlzcGxheTogZmxleDtcbiAgcGFkZGluZzogMjBweDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgYm94LXNoYWRvdzogMCAxMHB4IDIwcHggMCByZ2JhKDExNiwgMTAzLCA5MSwgMC4wNTkpO1xuICB0cmFuc2l0aW9uOiBhbGwgMC41cyBlYXNlO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5ib29rLWNvdmVyIHtcbiAgb3JkZXI6IC0xO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHBlcnNwZWN0aXZlOiAxMDBweDtcbn1cblxuLnBhY2t0LXB1Ymxpc2hpbmcgaW1nIHtcbiAgZGlzcGxheTogbm9uZTtcbn1cblxuLmJvb2stY292ZXIgaW1nIHtcbiAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuNXM7XG59XG5cbkBtZWRpYSAobWluLXdpZHRoOiA1MDBweCkge1xuICAucGFja3QtcHVibGlzaGluZyBkaXYge1xuICAgIGRpc3BsYXk6IGlubGluZTtcbiAgfVxuXG4gIC5wYWNrdC1wdWJsaXNoaW5nIGltZyB7XG4gICAgZGlzcGxheTogaW5saW5lO1xuICB9XG5cbiAgLmNoYXB0ZXIge1xuICAgIHdpZHRoOiA5MCU7XG4gIH1cblxuICAuYm9vay1jb3ZlciB7XG4gICAgb3JkZXI6IDA7XG4gICAgdHJhbnNmb3JtOiBzY2FsZSgxLjIpO1xuICB9XG5cbiAgLnJpZ2h0IC5jaGFwdGVyIHtcbiAgICBmbG9hdDogcmlnaHQ7XG4gIH1cblxuICAuYm9vay1jb3ZlciBpbWcge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB0b3A6IDcwcHg7XG4gIH1cbn1cbi5jaGFwdGVyOmhvdmVyIHtcbiAgYm94LXNoYWRvdzogMCAxMHB4IDI1cHggMCByZ2JhKDExNiwgMTAzLCA5MSwgMC4zKTtcbiAgYmFja2dyb3VuZDogI2U3NjkyYztcbiAgY29sb3I6IHdoaXRlO1xufVxuXG4ubnVtYmVyIHtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xufVxuXG4udGl0bGUge1xuICBmb250LXNpemU6IDE0cHg7XG4gIG1hcmdpbi1yaWdodDogMTBweDtcbn1cblxuLnJvdW5kLWltZyB7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4ucm91bmQtaW1nIGltZyB7XG4gIGJvcmRlci1yYWRpdXM6IDI5MDQ4NnB4O1xuICB3aWR0aDogNTAlO1xuICBtYXJnaW46IDMwcHg7XG59XG5cbi5sZWZ0IHtcbiAgZmxvYXQ6IGxlZnQ7XG59XG5cbi5yaWdodCB7XG4gIGZsb2F0OiByaWdodDtcbn1cblxuLmp1c3RpZnktY29udGVudC1jZW50ZXIge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xufVxuXG4uanVzdGlmeS1jb250ZW50LWNlbnRlciBpbWcge1xuICBtYXJnaW4tcmlnaHQ6IDMwcHg7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi53aGl0ZS1iZyB7XG4gIGJhY2tncm91bmQ6IHdoaXRlO1xufVxuXG4uYmVuZWZpdHMgLm9yYW5nZSBkaXYge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgdG9wOiAtMTBweDtcbiAgbWFyZ2luLWxlZnQ6IDEwcHg7XG59XG5cbi5vcmFuZ2Uge1xuICBjb2xvcjogI2U3NjkyYztcbn1cblxuLmxhbmRpbmctdGl0bGUge1xuICBtYXJnaW4tdG9wOiAwO1xufVxuXG4ubGFuZGluZy10aXRsZTphZnRlciB7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB3aWR0aDogMzVweDtcbiAgaGVpZ2h0OiAycHg7XG4gIGRpc3BsYXk6IGluaGVyaXQ7XG4gIGJhY2tncm91bmQtY29sb3I6ICNlNzY5MmM7XG4gIGNvbnRlbnQ6IFwiXCI7XG4gIGxlZnQ6IDUwJTtcbiAgbWFyZ2luLXRvcDogMTdweDtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpO1xufVxuXG4uY29udGVudCAubGFuZGluZy10aXRsZTphZnRlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwMDA7XG59XG5cbi5vcmFuZ2UtYmcge1xuICBiYWNrZ3JvdW5kOiAjZTc2OTJjO1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi5vcmFuZ2UtYmcgYSB7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuLnNtYWxsLWltZyBpbWcge1xuICB3aWR0aDogNDBweDtcbiAgbWFyZ2luOiAwO1xuICBtYXJnaW4tbGVmdDogMjBweDtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHRvcDogMTBweDtcbn1cblxuLmxvZ28tdGl0bGUge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHRvcDogLTNweDtcbiAgbWFyZ2luOiAwO1xufVxuXG5uYXYgLmxlZnQge1xuICBkaXNwbGF5OiBmbGV4O1xufVxuXG5zZWN0aW9uIHtcbiAgcGFkZGluZy1ib3R0b206IDUwcHg7XG4gIG1hcmdpbi10b3A6IDUwcHg7XG4gIHBhZGRpbmctdG9wOiAxcHg7XG59XG5cbi5pdGFsaWMge1xuICBmb250LXN0eWxlOiBpdGFsaWM7XG59XG5cbmJsb2NrcXVvdGUge1xuICBwYWRkaW5nLXRvcDogMjBweDtcbn1cblxuYmxvY2txdW90ZTpiZWZvcmUge1xuICBjb2xvcjogI2NjYztcbiAgY29udGVudDogXCLigJxcIjtcbiAgZm9udC1zaXplOiA1ZW07XG4gIGxpbmUtaGVpZ2h0OiAwZW07XG4gIG1hcmdpbi1yaWdodDogMC4xZW07XG4gIHZlcnRpY2FsLWFsaWduOiAtMC40ZW07XG59XG5cbi5xdW90ZSB7XG4gIGJhY2tncm91bmQ6IHdoaXRlO1xuICBib3JkZXItcmFkaXVzOiA2cHg7XG4gIGJveC1zaGFkb3c6IDAgMzBweCAyMHB4IDAgcmdiYSgxMTYsIDEwMywgOTEsIDAuMDU5KTtcbiAgcGFkZGluZy1ib3R0b206IDIwcHg7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHRyYW5zcGFyZW50O1xufVxuXG4ucXVvdGU6aG92ZXIge1xuICBib3gtc2hhZG93OiBub25lO1xuICBib3JkZXI6IDFweCBzb2xpZCAjZTc2OTJjO1xufVxuXG4uZGV0YWlscyB7XG4gIGRpc3BsYXk6IG5vbmU7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgYmFja2dyb3VuZDogI2U3NjkyYztcbiAgY29sb3I6IHdoaXRlO1xufVxuXG4uZGV0YWlscyAuY2hhcHRlci1pbi1kZXRhaWxzIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGJveC1zaGFkb3c6IG5vbmU7XG4gIGNvbG9yOiAjMDAwO1xuICBib3JkZXItcmFkaXVzOiAwO1xuICBib3JkZXItYm90dG9tOiAycHggc29saWQgIzAwMDtcbiAgbWFyZ2luLWJvdHRvbTogMDtcbn1cblxuLmNoYXB0ZXItaW4tZGV0YWlscyAudGl0bGUge1xuICBtYXJnaW4tcmlnaHQ6IDMwcHg7XG59XG5cbi5kZXRhaWxzLmFuaW1hdGVkIC5jb250ZW50IHtcbiAgb3ZlcmZsb3c6IGF1dG87XG4gIGhlaWdodDogY2FsYygxMDB2aCAtIDEwMHB4KTtcbn1cblxuLmRldGFpbHMuYW5pbWF0ZWQgLnRpdGxlIHtcbiAgdHJhbnNpdGlvbjogYWxsIDFzIGN1YmljLWJlemllcigwLjI1LCAwLjgsIDAuMjUsIDEpO1xuICBmb250LXNpemU6IDE4cHg7XG59XG5cbi5kZXRhaWxzLmFuaW1hdGVkIC5udW1iZXIge1xuICB0cmFuc2l0aW9uOiBhbGwgMXMgY3ViaWMtYmV6aWVyKDAuMjUsIDAuOCwgMC4yNSwgMSk7XG4gIGZvbnQtc2l6ZTogMzJweDtcbn1cblxuLmNsb3NlLWJ0biB7XG4gIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xuICBvdXRsaW5lOiBub25lO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHJpZ2h0OiAwO1xuICBkaXNwbGF5OiBub25lO1xufVxuXG4uYW5pbWF0ZWQgLmNsb3NlLWJ0biB7XG4gIGRpc3BsYXk6IGJsb2NrO1xufVxuXG4uZGV0YWlscy5hbmltYXRpbmcge1xuICBkaXNwbGF5OiBibG9jaztcbn1cblxuLyogQmFzaWMgc3R5bGluZyAqL1xuLm5nLXByb2otdGl0bGUge1xuICBtYXJnaW46IDAgYXV0bztcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGhlaWdodDogNzVweDtcbiAgd2lkdGg6IDMwNXB4O1xufVxuXG4uZmlsbGVkLWhlYWRpbmcge1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgZm9udC1mYW1pbHk6IFwiUG9wcGluc1wiLCBcIkhlbHZldGljYSBOZXVlXCIsIEFyaWFsLCBIZWx2ZXRpY2EsIFZlcmRhbmE7XG4gIGZvbnQtc2l6ZTogMmVtO1xuICBsaW5lLWhlaWdodDogMC41O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbkBtZWRpYSAobWluLXdpZHRoOiA1MDBweCkge1xuICAubmctcHJvai10aXRsZSB7XG4gICAgaGVpZ2h0OiA3NXB4O1xuICAgIHdpZHRoOiA0NTlweDtcbiAgfVxuXG4gIC5maWxsZWQtaGVhZGluZyB7XG4gICAgZm9udC1zaXplOiAzZW07XG4gICAgbGluZS1oZWlnaHQ6IDAuNTtcbiAgfVxufVxuLyogQW5pbWF0ZSB0aGUgYmFja2dyb3VuZCBzaGFwZXMgKi9cbiNiYWNrZ3JvdW5kIHBhdGgge1xuICB0cmFuc2Zvcm0tb3JpZ2luOiA1MCUgNTAlO1xuICB0cmFuc2Zvcm0tYm94OiBmaWxsLWJveDtcbn1cblxuI2JhY2tncm91bmQgcGF0aDpudGgtb2YtdHlwZSgybikge1xuICBhbmltYXRpb246IHJvdGF0ZSA1cyBsaW5lYXIgaW5maW5pdGU7XG59XG5cbiNiYWNrZ3JvdW5kIHBhdGg6bnRoLW9mLXR5cGUoMm4gKyAxKSB7XG4gIGFuaW1hdGlvbjogcm90YXRlIDNzIGxpbmVhciByZXZlcnNlIGluZmluaXRlO1xufVxuXG5Aa2V5ZnJhbWVzIHJvdGF0ZSB7XG4gIDAlIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgwKTtcbiAgfVxuICAxMDAlIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpO1xuICB9XG59XG4udG9waWNzIGltZyB7XG4gIHdpZHRoOiA0NXB4O1xufVxuXG4udG9waWMge1xuICBmbGV4OiAxMDBweDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uYmVuZWZpdHMsIC50b3BpY3Mge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbltkYXRhLXRvb2x0aXBdOmJlZm9yZSB7XG4gIGJvdHRvbTogMTAwJTtcbiAgbGVmdDogNTAlO1xuICBtYXJnaW4tYm90dG9tOiA1cHg7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIDEwcHgpO1xuICB0cmFuc2Zvcm0tb3JpZ2luOiB0b3A7XG59XG5cbltkYXRhLXRvb2x0aXBdOmFmdGVyIHtcbiAgb3BhY2l0eTogMDtcbiAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG4gIGZvbnQtc2l6ZTogMTJweCAhaW1wb3J0YW50O1xuICBiYWNrZ3JvdW5kOiAjZTc2OTJjO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIGNvbG9yOiAjZmZmO1xuICBjb250ZW50OiBhdHRyKGRhdGEtdG9vbHRpcCk7XG4gIHBhZGRpbmc6IDAuNWVtIDFlbTtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB6LWluZGV4OiAxMDtcbiAgYm90dG9tOiAxMDAlO1xuICBsZWZ0OiA1MCU7XG4gIG1hcmdpbi1ib3R0b206IDExcHg7XG4gIHRyYW5zZm9ybS1vcmlnaW46IHRvcDtcbiAgd2hpdGUtc3BhY2U6IG5vcm1hbDtcbiAgd2lkdGg6IDMwMHB4O1xuICBsaW5lLWhlaWdodDogMjBweDtcbiAgZm9udC1zaXplOiAxNHB4O1xufVxuXG5bZGF0YS10b29sdGlwXTpob3ZlcjphZnRlciB7XG4gIG9wYWNpdHk6IDE7XG4gIHBvaW50ZXItZXZlbnRzOiBhdXRvO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAwKTtcbn0iLCJcbi5jb250YWluZXIge1xuICBtYXgtd2lkdGg6IDEwMDBweDtcbiAgbWFyZ2luOiAwIGF1dG87XG4gIHBhZGRpbmc6IDEwcHg7XG59XG5cbi5jb250YWluZXI6OmFmdGVyIHtcbiAgY29udGVudDogXCJcIjtcbiAgY2xlYXI6IGJvdGg7XG4gIGRpc3BsYXk6IHRhYmxlO1xufVxuXG4uYnV0dG9ucyB7XG4gIGRpc3BsYXk6IGZsZXhcbn1cblxuLmJ1dHRvbnMgYnV0dG9uIHtcbiAgZmxleDogMTtcbiAgZm9udC1zaXplOiAxOHB4XG59XG5cbi5ib29rIHtcbiAgbWFyZ2luOiAwIGF1dG87XG4gIG1hcmdpbi10b3A6IDUwcHg7XG59XG5cbi5wYWNrdC1sb2dvIHtcbiAgd2lkdGg6IDYzcHg7XG4gIG1hcmdpbi1yaWdodDogMjBweDtcbiAgaGVpZ2h0OiAyNXB4O1xufVxuXG4uYWJvdXQge1xuICBwYWRkaW5nOiAxMHB4O1xufVxuXG4ubGlnaHQtZ3JheSB7XG4gIGNvbG9yOiAjYThhOGE4O1xufVxuXG5uYXYgYSB7XG4gIG1hcmdpbi1yaWdodDogMTBweDtcbiAgY29sb3I6IHdoaXRlO1xufVxuXG4ucGFkZGluZy10Yi0zMCB7XG4gIHBhZGRpbmctdG9wOiAxMHB4O1xuICBwYWRkaW5nLWJvdHRvbTogMzBweDtcbn1cblxuLmNoYXB0ZXIsXG4uY2hhcHRlci1pbi1kZXRhaWxzIHtcbiAgYmFja2dyb3VuZDogd2hpdGU7XG4gIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgbWFyZ2luLWJvdHRvbTogMjVweDtcbiAgZGlzcGxheTogZmxleDtcbiAgcGFkZGluZzogMjBweDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgYm94LXNoYWRvdzogMCAxMHB4IDIwcHggMCByZ2JhKDExNiwxMDMsOTEsLjA1OSk7XG4gIHRyYW5zaXRpb246IGFsbCAuNXMgZWFzZTtcbiAgY3Vyc29yOiBwb2ludGVyXG59XG5cbi5ib29rLWNvdmVyIHtcbiAgb3JkZXI6IC0xO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHBlcnNwZWN0aXZlOiAxMDBweDtcblxufVxuXG4ucGFja3QtcHVibGlzaGluZyBpbWcge1xuICBkaXNwbGF5OiBub25lO1xufVxuXG4uYm9vay1jb3ZlciBpbWcge1xuICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjVzO1xufVxuXG5AbWVkaWEgKG1pbi13aWR0aDogNTAwcHgpIHtcbiAgLnBhY2t0LXB1Ymxpc2hpbmcgZGl2IHtcbiAgICBkaXNwbGF5OiBpbmxpbmVcbiAgfVxuICAucGFja3QtcHVibGlzaGluZyBpbWcge1xuICBkaXNwbGF5OiBpbmxpbmU7XG59XG4gICAuY2hhcHRlciB7XG4gICAgICAgd2lkdGg6IDkwJTtcbiAgIH1cbiAgIC5ib29rLWNvdmVyIHtcbiAgb3JkZXI6IDA7XG4gIHRyYW5zZm9ybTogc2NhbGUoMS4yKTtcbn1cbi5yaWdodCAuY2hhcHRlciB7XG4gIGZsb2F0OiByaWdodDtcbn1cblxuICAgLmJvb2stY292ZXIgaW1nIHtcbiAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdG9wOiA3MHB4O1xuICAgIH1cbn1cblxuLmNoYXB0ZXI6aG92ZXIge1xuICBib3gtc2hhZG93OiAwIDEwcHggMjVweCAwIHJnYmEoMTE2LDEwMyw5MSwuMyk7XG4gIGJhY2tncm91bmQ6ICNlNzY5MmM7XG4gIGNvbG9yOiB3aGl0ZVxufVxuXG4ubnVtYmVyIHtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xufVxuXG4udGl0bGUge1xuICBmb250LXNpemU6IDE0cHg7XG4gIG1hcmdpbi1yaWdodDogMTBweDtcbn1cblxuLnJvdW5kLWltZyB7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuXG59XG5cbi5yb3VuZC1pbWcgaW1nIHtcbiAgYm9yZGVyLXJhZGl1czogMjkwNDg2cHg7XG4gIHdpZHRoOiA1MCU7XG4gIG1hcmdpbjogMzBweDtcbn1cbi5sZWZ0IHtcbiAgZmxvYXQ6IGxlZnRcbn1cbi5yaWdodCB7XG4gIGZsb2F0OiByaWdodFxufVxuXG4uanVzdGlmeS1jb250ZW50LWNlbnRlciB7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LXdyYXA6IHdyYXA7XG59XG5cbi5qdXN0aWZ5LWNvbnRlbnQtY2VudGVyIGltZyB7XG4gIG1hcmdpbi1yaWdodDogMzBweDtcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuLndoaXRlLWJnIHtcbiAgYmFja2dyb3VuZDogd2hpdGU7XG5cbn1cblxuLmJlbmVmaXRzIC5vcmFuZ2UgZGl2IHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHRvcDogLTEwcHg7XG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xufVxuLm9yYW5nZSB7XG4gIGNvbG9yOiAjZTc2OTJjO1xufVxuXG4ubGFuZGluZy10aXRsZSB7XG4gIG1hcmdpbi10b3A6IDA7XG59XG5cbi5sYW5kaW5nLXRpdGxlOmFmdGVyIHtcbiAgICB0b3A6IDA7XG4gICAgbGVmdDogMDtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgd2lkdGg6IDM1cHg7XG4gICAgaGVpZ2h0OiAycHg7XG4gICAgZGlzcGxheTogaW5oZXJpdDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTc2OTJjO1xuICAgIGNvbnRlbnQ6IFwiXCI7XG4gICAgbGVmdDogNTAlO1xuICAgIG1hcmdpbi10b3A6IDE3cHg7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpO1xufVxuXG4uY29udGVudCAubGFuZGluZy10aXRsZTphZnRlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwMDA7XG59XG5cbi5vcmFuZ2UtYmcge1xuICBiYWNrZ3JvdW5kOiAjZTc2OTJjO1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi5vcmFuZ2UtYmcgYSB7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuLnNtYWxsLWltZyBpbWcge1xuICB3aWR0aDogNDBweDtcbiAgbWFyZ2luOiAwO1xuICBtYXJnaW4tbGVmdDogMjBweDtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHRvcDogMTBweDtcbn1cblxuLmxvZ28tdGl0bGUge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHRvcDogLTNweDtcbiAgbWFyZ2luOiAwO1xufVxuXG5uYXYgLmxlZnQge1xuICBkaXNwbGF5OiBmbGV4O1xufVxuXG5zZWN0aW9uIHtcbiAgcGFkZGluZy1ib3R0b206IDUwcHg7XG4gIG1hcmdpbi10b3A6IDUwcHg7XG4gIHBhZGRpbmctdG9wOiAxcHg7XG59XG5cbi5pdGFsaWMge1xuICBmb250LXN0eWxlOiBpdGFsaWM7XG59XG5cbmJsb2NrcXVvdGUge1xuICBwYWRkaW5nLXRvcDogMjBweDtcbn1cblxuYmxvY2txdW90ZTpiZWZvcmUge1xuICBjb2xvcjogI2NjYztcbiAgY29udGVudDogJ+KAnCc7XG4gIGZvbnQtc2l6ZTogNWVtO1xuICBsaW5lLWhlaWdodDogMGVtO1xuICBtYXJnaW4tcmlnaHQ6IDAuMWVtO1xuICB2ZXJ0aWNhbC1hbGlnbjogLTAuNGVtO1xufVxuXG5cbi5xdW90ZSB7XG4gIGJhY2tncm91bmQ6IHdoaXRlO1xuICBib3JkZXItcmFkaXVzOiA2cHg7XG4gIGJveC1zaGFkb3c6IDAgMzBweCAyMHB4IDAgcmdiYSgxMTYsMTAzLDkxLC4wNTkpO1xuICBwYWRkaW5nLWJvdHRvbTogMjBweDtcbiAgYm9yZGVyOiAxcHggc29saWQgdHJhbnNwYXJlbnQ7XG59XG5cbi5xdW90ZTpob3ZlciB7XG4gIGJveC1zaGFkb3c6IG5vbmU7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNlNzY5MmNcbn1cblxuLmRldGFpbHMge1xuICBkaXNwbGF5OiBub25lO1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGJhY2tncm91bmQ6ICNlNzY5MmM7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuLmRldGFpbHMgLmNoYXB0ZXItaW4tZGV0YWlscyB7XG4gIHdpZHRoOiAxMDAlO1xuICBib3gtc2hhZG93OiBub25lO1xuICBjb2xvcjogIzAwMDtcbiAgYm9yZGVyLXJhZGl1czogMDtcbiAgYm9yZGVyLWJvdHRvbTogMnB4IHNvbGlkICMwMDA7XG4gIG1hcmdpbi1ib3R0b206IDA7XG59XG5cbi5jaGFwdGVyLWluLWRldGFpbHMgLnRpdGxlIHtcbiAgbWFyZ2luLXJpZ2h0OiAzMHB4O1xufVxuXG4uZGV0YWlscy5hbmltYXRlZCAuY29udGVudCB7XG4gIG92ZXJmbG93OiBhdXRvO1xuICBoZWlnaHQ6IGNhbGMoMTAwdmggLSAxMDBweClcbn1cblxuLmRldGFpbHMuYW5pbWF0ZWQgLnRpdGxlIHtcbiAgdHJhbnNpdGlvbjogYWxsIDFzIGN1YmljLWJlemllcigwLjI1LCAwLjgsIDAuMjUsIDEpO1xuICBmb250LXNpemU6IDE4cHg7XG59XG5cbi5kZXRhaWxzLmFuaW1hdGVkIC5udW1iZXIge1xuICB0cmFuc2l0aW9uOiBhbGwgMXMgY3ViaWMtYmV6aWVyKDAuMjUsIDAuOCwgMC4yNSwgMSk7XG4gIGZvbnQtc2l6ZTogMzJweDtcbn1cblxuLmNsb3NlLWJ0biB7XG4gIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xuICBvdXRsaW5lOiBub25lO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHJpZ2h0OiAwO1xuICBkaXNwbGF5OiBub25lO1xufVxuXG4uYW5pbWF0ZWQgLmNsb3NlLWJ0biB7XG4gIGRpc3BsYXk6IGJsb2NrO1xufVxuXG4uZGV0YWlscy5hbmltYXRpbmcge1xuICBkaXNwbGF5OiBibG9jaztcbn1cblxuLyogQmFzaWMgc3R5bGluZyAqL1xuLm5nLXByb2otdGl0bGUge1xuICAgIG1hcmdpbjogMCBhdXRvO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgaGVpZ2h0OiA3NXB4O1xuICAgIHdpZHRoOiAzMDVweDtcbn1cblxuXG4uZmlsbGVkLWhlYWRpbmcge1xuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgZm9udC1mYW1pbHk6IFwiUG9wcGluc1wiLFwiSGVsdmV0aWNhIE5ldWVcIixBcmlhbCxIZWx2ZXRpY2EsVmVyZGFuYTtcbiAgICBmb250LXNpemU6IDJlbTtcbiAgICBsaW5lLWhlaWdodDogMC41O1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuQG1lZGlhIChtaW4td2lkdGg6IDUwMHB4KSB7XG4gIC5uZy1wcm9qLXRpdGxlIHtcbiAgICBoZWlnaHQ6IDc1cHg7XG4gICAgd2lkdGg6IDQ1OXB4O1xuICB9XG4uZmlsbGVkLWhlYWRpbmcge1xuICAgIGZvbnQtc2l6ZTogM2VtO1xuICAgIGxpbmUtaGVpZ2h0OiAwLjU7XG59XG59XG4vKiBBbmltYXRlIHRoZSBiYWNrZ3JvdW5kIHNoYXBlcyAqL1xuI2JhY2tncm91bmQgcGF0aCB7XG4gICAgdHJhbnNmb3JtLW9yaWdpbjogNTAlIDUwJTtcbiAgICB0cmFuc2Zvcm0tYm94OiBmaWxsLWJveDtcbn1cbiNiYWNrZ3JvdW5kIHBhdGg6bnRoLW9mLXR5cGUoMm4pIHtcbiAgICBhbmltYXRpb246IHJvdGF0ZSA1cyBsaW5lYXIgaW5maW5pdGU7XG59XG4jYmFja2dyb3VuZCBwYXRoOm50aC1vZi10eXBlKDJuICsgMSkge1xuICAgIGFuaW1hdGlvbjogcm90YXRlIDNzIGxpbmVhciByZXZlcnNlIGluZmluaXRlO1xufVxuXG5Aa2V5ZnJhbWVzIHJvdGF0ZSB7XG4gICAgMCUgeyB0cmFuc2Zvcm06IHJvdGF0ZSgwKTsgfVxuICAgIDEwMCUgeyB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpOyB9XG59XG5cblxuLnRvcGljcyBpbWcge1xuICB3aWR0aDogNDVweDtcbn1cblxuLnRvcGljIHtcbiAgZmxleDogMTAwcHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLmJlbmVmaXRzLCAudG9waWNzIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG5bZGF0YS10b29sdGlwXTpiZWZvcmUge1xuICBib3R0b206IDEwMCU7XG4gIGxlZnQ6IDUwJTtcbiAgbWFyZ2luLWJvdHRvbTogNXB4O1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAxMHB4KTtcbiAgdHJhbnNmb3JtLW9yaWdpbjogdG9wO1xufVxuXG5bZGF0YS10b29sdGlwXTphZnRlciB7XG4gICAgb3BhY2l0eTogMDtcbiAgICBwb2ludGVyLWV2ZW50czogbm9uZTtcbiAgICBmb250LXNpemU6IDEycHggIWltcG9ydGFudDtcbiAgICBiYWNrZ3JvdW5kOiAjZTc2OTJjO1xuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICBjb2xvcjogI2ZmZjtcbiAgICBjb250ZW50OiBhdHRyKGRhdGEtdG9vbHRpcCk7XG4gICAgcGFkZGluZzogLjVlbSAxZW07XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHotaW5kZXg6IDEwO1xuICAgIGJvdHRvbTogMTAwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgbWFyZ2luLWJvdHRvbTogMTFweDtcbiAgICB0cmFuc2Zvcm0tb3JpZ2luOiB0b3A7XG4gICAgd2hpdGUtc3BhY2U6IG5vcm1hbDtcbiAgICB3aWR0aDogMzAwcHg7XG4gICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gICAgZm9udC1zaXplOiAxNHB4O1xufVxuXG5bZGF0YS10b29sdGlwXTpob3ZlcjphZnRlciB7XG4gIG9wYWNpdHk6IDE7XG4gIHBvaW50ZXItZXZlbnRzOiBhdXRvO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAwKTtcbn1cbiJdfQ== */</style></head>
+<body class="ng-tns-0-1">
+  <app-root _nghost-sc0="" class="ng-tns-c0-0" ng-version="8.0.0-rc.0"><nav _ngcontent-sc0="" class="ng-tns-c0-0"><div _ngcontent-sc0="" class="container"><div _ngcontent-sc0="" class="left"><img _ngcontent-sc0="" class="packt-logo" alt="Packt Logo" src="assets/packt.svg"><h1 _ngcontent-sc0="" class="logo-title">Angular Projects <div _ngcontent-sc0="" class="is-size-7"> with Zama Khan Mohammed</div></h1></div></div></nav><main _ngcontent-sc0="" class="text-center"><svg _ngcontent-sc0="" class="ng-proj-title" viewbox="0 0 700 225"><clipPath _ngcontent-sc0="" class="filled-heading" id="text"><text _ngcontent-sc0="" class="ng-tns-c0-0" y="70">Angular Projects</text></clipPath><g _ngcontent-sc0="" class="ng-tns-c0-0" clip-path="url(#text)" id="background"><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m445.62-26.657c-19.58 20.137-3.6309 59.698 27.377 73.932 31.007 14.234 67.049-14.123 72.974-27.02 5.9253-12.875-13.142-59.988-24.058-65.022-10.937-5.012-42.19-16.996-76.294 18.11z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m449.78 166.4c20.137 19.58 59.698 3.6309 73.932-27.377 14.234-31.007-14.123-67.071-27.02-72.974-12.875-5.9253-3.5418 38.759-20.382 59.364-15.704 19.201-61.636 6.8608-26.53 40.987z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m299.4 7.4916c15.704-7.5959-10.269-35.128-31.297-38.002-20.983-2.8513-44.395 14.835-51.969 26.597-10.848 16.863 2.3389 30.785 9.7344 31.787 7.3954 1.0024 53.238-10.581 73.531-20.382z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m-23.125 15.756c-25.35 12.096-24.124 54.709 0 78.833 24.124 24.124 67.806 10.024 77.83 0 10.024-10.024 8.4869-60.834 0-69.321-8.487-8.487-33.658-30.584-77.83-9.5116z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m354 213.43c9.378-26.463-21.629-55.755-55.755-55.755-34.126 0-55.02 40.853-55.02 55.02 0 14.167 37 49.028 49.028 49.028 12.006 0 45.397-2.1607 61.748-48.293z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m269.57 39.746c-26.463-9.3557-55.756 21.629-55.756 55.755 0 34.126 40.853 55.02 55.02 55.02s-12.964-36.71-6.2816-62.438c6.2594-24.013 53.149-31.988 7.0167-48.338z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m396.7 253.28c22.676 16.551 42.123-41.187 30.272-73.197-11.851-32.01-54.686-51.857-77.118-53.706-32.188-2.6508-41.967 26.641-37.802 37.913 4.1878 11.271 55.355 67.584 84.647 88.99z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m368.92 42.13c-17.442 0.33414-5.3461 36.22 12.563 47.58 17.909 11.36 46.556 5.0788 58.339-2.4503 16.907-10.804 10.737-28.958 4.4328-32.968-6.3039-3.9873-52.793-12.586-75.336-12.162z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m409.18 183.25c-17.442 0.33413-5.3461 36.22 12.563 47.58 17.887 11.383 46.556 5.0788 58.34-2.4503 16.907-10.804 10.737-28.958 4.4328-32.968-6.304-3.9873-52.771-12.586-75.336-12.162z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m110.44 135.06c-25.349 12.096-24.124 54.709 0 78.833 24.124 24.124 67.806 10.024 77.83 0 10.024-10.024 8.4869-60.834 0-69.321-8.5093-8.487-33.658-30.584-77.83-9.5116z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m134.41-33.696c-25.35 12.096-24.124 54.709 0 78.833 24.124 24.124 67.806 10.024 77.83 0 10.024-10.024 8.4869-60.834 0-69.321-8.5092-8.4869-33.658-30.584-77.83-9.5116z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m71.301 148.81c12.096 25.349 54.708 24.124 78.833 0 24.124-24.124 10.024-67.807 0-77.83-10.024-10.024-16.774 35.128-39.717 48.583-21.407 12.586-60.188-14.925-39.116 29.248z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m132.74 79.753c3.4973 27.844 50.031 16.194 74.155-7.9301 24.124-24.124 17.553-32.789 7.5291-42.836-10.024-10.046-24.303 0.13365-47.246 13.588-21.407 12.608-38.18 7.3955-34.438 37.178z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m52.501 109.18c-27.844 3.4972-16.194 50.031 7.9301 74.155 24.124 24.124 32.79 17.553 42.836 7.5291 10.046-10.024-0.1337-24.303-13.588-47.246-12.608-21.429-7.3955-38.18-37.178-34.438z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m137.44 89.51c23.389-15.504-20.939-25.951-55.065-25.951-34.126 0-70.68 5.4352-80.192 25.817-13.655 29.27 10.425 48.605 22.431 48.605s82.575-28.423 112.83-48.471z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m171.61 118.56c23.389-15.504-20.939-25.951-55.065-25.951-34.126 0-70.68 5.4352-80.192 25.817-13.655 29.27 10.425 48.605 22.431 48.605s82.575-28.423 112.83-48.471z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m273.56 120.12c23.389-15.504-20.939-25.951-55.065-25.951s-70.68 5.4352-80.192 25.817c-13.655 29.27 10.425 48.605 22.431 48.605 12.006 0.0223 82.575-28.423 112.83-48.471z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m102.51 97.173c15.504 23.389 53.795-24.013 53.795-58.139 0-34.126-33.28-67.606-53.684-77.14-29.27-13.655-48.605 10.425-48.605 22.431 0 12.006 28.446 82.597 48.494 112.85z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m15.1 236.39c15.504 23.389 53.795-24.013 53.795-58.139s-33.28-67.606-53.662-77.118c-29.27-13.655-48.605 10.425-48.605 22.431 0 12.006 28.424 82.575 48.471 112.83z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m38.601 4.2171c-16.484-5.7471-17.575 32.099-4.7447 48.984 12.831 16.885 41.9 20.917 55.555 17.954 19.602-4.2546 20.115-23.434 15.593-29.381-4.5219-5.9253-45.108-30.139-66.403-37.556z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m48.068 156.65c-16.484-5.7471-17.575 32.099-4.7447 48.984 12.831 16.885 41.9 20.917 55.555 17.954 19.602-4.2546 20.115-23.434 15.593-29.381-4.522-5.9253-45.13-30.139-66.403-37.556z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m430.43 67.056c9.3779-26.463-21.63-55.755-55.756-55.755s-55.02 40.853-55.02 55.02c0 14.167 37 49.028 49.028 49.028 12.006 0.0223 45.397-2.1384 61.748-48.293z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m251.62 77.147c9.378-26.463-21.63-55.755-55.756-55.755s-55.02 40.853-55.02 55.02c0 14.167 37 49.051 49.006 49.051 12.029 0 45.42-2.1607 61.77-48.315z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m274.94 132.01c-22.164-17.219-46.823 23.924-46.823 58.028s10.781 35.596 24.971 35.596 17.108-17.263 23.79-43.014c6.2371-24.013 21.785-32.166-1.938-50.61z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m310.9 54.493c17.219-22.164-23.924-46.823-58.028-46.823-34.104 0-35.618 10.781-35.618 24.949 0 14.167 17.263 17.108 43.014 23.79 24.035 6.2594 32.21 21.785 50.632-1.9157z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m264.74 128.47c-5.5689 27.51 33.146 3.5418 57.27-20.583 24.124-24.124 46.132-53.84 38.447-74.979-11.026-30.361-41.722-26.998-50.209-18.511-8.4869 8.487-38.314 78.499-45.509 114.07z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m220.03 132.08c-5.5689 27.51 33.146 3.5418 57.27-20.583 24.124-24.124 46.132-53.818 38.448-74.979-11.026-30.361-41.722-26.998-50.209-18.511-8.5093 8.487-38.292 78.499-45.509 114.07z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m162.34 234.95c-5.7316 28.402 34.114 3.6566 58.943-21.25 24.829-24.906 47.48-55.562 39.571-77.409-11.348-31.322-42.941-27.873-51.698-19.111-8.7119 8.785-39.387 81.043-46.815 117.77z" stroke-width=".22962"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m284.01 98.331c-27.51-5.5689-21.073 55.02 3.074 79.145 24.147 24.124 71.348 24.28 92.488 16.573 30.339-11.026 26.998-41.722 18.511-50.231-8.487-8.487-78.499-38.269-114.07-45.487z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m281.49-61.362c-27.51-5.5689-21.073 55.02 3.074 79.145 24.147 24.124 71.348 24.28 92.488 16.573 30.339-11.026 26.998-41.722 18.511-50.231-8.487-8.5092-78.499-38.292-114.07-45.486z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m394.94 118.87c15.704-7.5959-10.269-35.128-31.297-38.002-21.006-2.8513-44.417 14.835-51.991 26.597-10.848 16.863 2.3389 30.785 9.7344 31.809 7.4177 1.0024 53.261-10.581 73.554-20.404z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m315.04 74.385c-19.58 20.137-3.6309 59.698 27.376 73.932 31.007 14.234 67.071-14.123 72.974-27.02 5.9253-12.875-13.142-59.988-24.058-65.022-10.915-5.0342-42.167-16.974-76.293 18.11z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m483.42 148.49c-19.58 20.137-3.6309 59.698 27.376 73.932 31.008 14.256 67.072-14.123 72.974-27.02 5.9252-12.875-13.143-59.988-24.058-65.022-10.915-5.012-42.167-16.996-76.293 18.11z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m483.42 80.31c12.942 24.904 52.548-2.1607 66.782-33.168 14.256-31.007 5.0788-36.844-7.8187-42.769-12.875-5.9253-22.743 8.5538-39.584 29.136-15.682 19.224-33.213 20.159-19.38 46.801z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m418.38 135.75c-24.904 12.942 2.1608 52.548 33.168 66.782 31.007 14.234 36.844 5.0788 42.769-7.8187 5.9253-12.898-8.5538-22.743-29.136-39.584-19.224-15.704-20.137-33.235-46.801-19.38z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m491.22 87.817c16.551-22.676-28.646-17.063-60.634-5.2347-31.988 11.828-64.398 29.626-66.247 52.058-2.6508 32.188 26.641 41.967 37.913 37.801 11.249-4.1655 67.562-55.332 88.968-84.624z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m533.34 103.21c16.551-22.676-28.646-17.063-60.634-5.2347-31.988 11.828-64.398 29.626-66.247 52.058-2.6508 32.188 26.641 41.967 37.913 37.801 11.249-4.1655 67.562-55.31 88.968-84.624z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m625.47 49.548c16.551-22.676-28.646-17.063-60.634-5.2347-32.01 11.851-64.398 29.626-66.247 52.058-2.6508 32.188 26.641 41.967 37.913 37.801 11.249-4.1655 67.562-55.332 88.968-84.625z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m461.12 107.13c22.676 16.551 42.123-41.187 30.272-73.197-11.85-32.01-54.686-51.835-77.118-53.684-32.166-2.6508-41.945 26.619-37.779 37.891 4.1655 11.271 55.31 67.584 84.624 88.99z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m601.9 237.96c-15.704 7.5959 10.269 35.128 31.297 38.002 20.983 2.8513 44.395-14.835 51.969-26.597 10.848-16.863-2.3389-30.785-9.7344-31.787-7.3954-1.0024-53.238 10.581-73.531 20.382z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m547.3 32.024c-9.378 26.463 21.629 55.755 55.755 55.755 34.126 0 55.02-40.853 55.02-55.02 0-14.167-37-49.028-49.028-49.028-12.006 0-45.397 2.1607-61.748 48.293z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m631.73 205.71c26.463 9.3557 55.756-21.629 55.756-55.755 0-34.126-40.853-55.02-55.02-55.02s12.964 36.71 6.2816 62.438c-6.2594 24.013-53.149 31.988-7.0167 48.338z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m626.36 113.44c22.164 17.219 46.823-23.924 46.823-58.028s-10.781-35.596-24.971-35.596-17.108 17.263-23.79 43.014c-6.2371 24.013-21.785 32.166 1.938 50.61z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m590.41 190.96c-17.219 22.164 23.924 46.823 58.028 46.823 34.104 0 35.618-10.781 35.618-24.949 0-14.167-17.263-17.108-43.014-23.79-24.035-6.2594-32.21-21.785-50.632 1.9157z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m636.56 116.98c5.5689-27.51-33.146-3.5418-57.27 20.583-24.124 24.124-46.133 53.84-38.447 74.979 11.026 30.361 41.722 26.998 50.209 18.511 8.4869-8.487 38.314-78.499 45.509-114.07z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m681.27 113.37c5.5689-27.51-33.146-3.5418-57.27 20.583-24.124 24.124-46.132 53.818-38.448 74.979 11.026 30.361 41.722 26.998 50.209 18.511 8.5093-8.487 38.292-78.499 45.509-114.07z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m734.02 188.36c13.701-24.519-11.944-58.604-45.579-64.328-33.635-5.7237-61.109 30.995-63.495 44.987-2.391 13.97 28.221 54.542 40.067 56.58 11.862 2.0104 45.151 5.4976 69.007-37.239z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m692.88 65.812c-24.519-13.701-58.604 11.944-64.328 45.579-5.7237 33.635 31.001 61.131 44.987 63.495 13.97 2.391-6.6105-38.355 4.323-62.617 10.199-22.612 57.76-22.58 15.018-46.457z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m727.75 39.036c16.761-4.837-4.2105-36.369-24.45-42.708-20.224-6.3654-46.284 7.1438-55.717 17.466-13.535 14.811-2.876 30.75 4.2509 32.992 7.1212 2.2198 54.23-1.5013 75.916-7.7503z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m731.16 87.29c20.706-18.947-15.688-50.198-49.322-55.922-33.635-5.7237-36.903 4.6301-39.288 18.622-2.3853 13.992 14.149 19.754 38.388 30.694 22.633 10.194 28.053 26.891 50.222 6.6064z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m628.53 148.48c-10.118 26.187 32.086 9.0674 59.923-10.637 27.836-19.704 54.536-45.284 50.516-67.43-5.7704-31.777-36.595-33.642-46.405-26.701-9.7877 6.9351-50.944 70.912-64.034 104.77z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m618.21 182.56c27.616-5.1225 37.462-46.601 20.403-76.147-17.058-29.546-62.902-27.232-75.178-20.144-12.277 7.088-23.943 56.565-17.942 66.959 6.0012 10.394 24.596 38.253 72.717 29.332z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m569.35 72.75c27.801 3.8286 28.591-44.135 11.533-73.681-17.058-29.546-27.129-25.442-39.427-18.359-12.298 7.0822-6.1608 23.509 0.89676 49.153 6.6322 23.962-2.7382 38.793 26.998 42.887z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m555.61 177.73c14.435 9.8176 25.284-26.456 17.261-46.087-8.0234-19.63-35.059-31.049-49.015-31.721-20.036-0.96383-25.494 17.429-22.666 24.344 2.8342 6.8937 35.77 40.787 54.42 53.463z" stroke-width=".22275"></path><path _ngcontent-sc0="" class="ng-tns-c0-0" d="m250.61 235.97c27.616-5.1225 37.462-46.601 20.403-76.147-17.058-29.546-62.902-27.232-75.178-20.144-12.277 7.088-23.943 56.565-17.942 66.959 6.0012 10.394 24.596 38.253 72.717 29.332z" stroke-width=".22275"></path></g></svg><h2 _ngcontent-sc0="" class="is-size-4 landing-title">Nine professional applications exploring Angular with TypeScript, Ionic, Firebase, and more</h2><div _ngcontent-sc0="" class="packt-publishing">A Packt Publishing book by <div _ngcontent-sc0="" class="round-img small-img"><img _ngcontent-sc0="" class="ng-tns-c0-0" alt="" src="https://pbs.twimg.com/profile_images/1088676437203111942/JshWVPTw_400x400.jpg"></div><div _ngcontent-sc0="" class="ng-tns-c0-0">Zama Khan Mohammed</div></div></main><main _ngcontent-sc0="" class="flex-row container "><div _ngcontent-sc0="" class="flex-1 about"><h2 _ngcontent-sc0="" class="is-size-1">LEARN ANGULAR THROUGH MULTIPLE DIFFERENT PROJECTS</h2><p _ngcontent-sc0="" class="ng-tns-c0-0">From a beginner friendly Flash Card App to a Progressive Web App, Server Side Rendered Single Page Application deployed on AWS Lambda using Serverless Framework to a Mono Repo, Cross Platform App using Ionic and NativeScript.</p><p _ngcontent-sc0="" class="ng-tns-c0-0">Learn how to develop application like these, that business use/need to improve the application infrastructure, SEO and Performance. </p><h3 _ngcontent-sc0="" class="is-size-3">Become a Angular expert today.</h3><div _ngcontent-sc0="" class="buttons"><button _ngcontent-sc0="" class="button button--naira button--round-s button--border-thin"><span _ngcontent-sc0="" class="button__icon icon icon-download"></span><span _ngcontent-sc0="" class="ng-tns-c0-0">Buy on Amazon</span></button><button _ngcontent-sc0="" class="packt-btn">Buy on Packt</button></div><p _ngcontent-sc0="" class="text-center is-size-4"><b _ngcontent-sc0="" class="ng-tns-c0-0">Get your copy today!</b></p></div><div _ngcontent-sc0="" class="flex-1 flex-center "><figure _ngcontent-sc0="" class="book"><ul _ngcontent-sc0="" class="hardcover_front"><li _ngcontent-sc0="" class="ng-tns-c0-0"><img _ngcontent-sc0="" class="ng-tns-c0-0" alt="" height="100%" src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9781789536645_cover.png" width="100%"></li><li _ngcontent-sc0="" class="ng-tns-c0-0"></li></ul><ul _ngcontent-sc0="" class="page"><li _ngcontent-sc0="" class="ng-tns-c0-0"></li><li _ngcontent-sc0="" class="ng-tns-c0-0"><a _ngcontent-sc0="" class="btn" href="#">CHAPTERS</a><a _ngcontent-sc0="" class="btn" href="#">CONCEPTS</a><a _ngcontent-sc0="" class="btn" href="#">BUY ON AMAZON</a><a _ngcontent-sc0="" class="btn" href="#">BUY ON PACKT</a></li><li _ngcontent-sc0="" class="ng-tns-c0-0"></li><li _ngcontent-sc0="" class="ng-tns-c0-0"></li><li _ngcontent-sc0="" class="ng-tns-c0-0"></li></ul><ul _ngcontent-sc0="" class="hardcover_back"><li _ngcontent-sc0="" class="ng-tns-c0-0"></li><li _ngcontent-sc0="" class="ng-tns-c0-0"></li></ul><ul _ngcontent-sc0="" class="book_spine"><li _ngcontent-sc0="" class="ng-tns-c0-0"></li><li _ngcontent-sc0="" class="ng-tns-c0-0"></li></ul></figure></div></main><section _ngcontent-sc0="" class="chapters"><div _ngcontent-sc0="" class="container"><h2 _ngcontent-sc0="" class="is-size-2 text-center landing-title">Best Angular practices in one book</h2><p _ngcontent-sc0="" class="is-size-5 text-center">A Packt Publication resource that will help you understand the Angular Development process and improve the quality of your work.</p><div _ngcontent-sc0="" class="flex-row"><div _ngcontent-sc0="" class="flex-1"><!----><div _ngcontent-sc0="" class="chapter ng-tns-c0-0 chapter0 ng-star-inserted"><div _ngcontent-sc0="" class="number light-gray">1</div><div _ngcontent-sc0="" class="title is-size-5">Setting up Development Environment</div></div><div _ngcontent-sc0="" class="chapter ng-tns-c0-0 chapter1 ng-star-inserted"><div _ngcontent-sc0="" class="number light-gray">2</div><div _ngcontent-sc0="" class="title is-size-5">Building a Flashcard game using Angular</div></div><div _ngcontent-sc0="" class="chapter ng-tns-c0-0 chapter2 ng-star-inserted"><div _ngcontent-sc0="" class="number light-gray">3</div><div _ngcontent-sc0="" class="title is-size-5">Building a Personal SPA blog using Angular Router and Wordpress</div></div><div _ngcontent-sc0="" class="chapter ng-tns-c0-0 chapter3 ng-star-inserted"><div _ngcontent-sc0="" class="number light-gray">4</div><div _ngcontent-sc0="" class="title is-size-5">Building an Inventory application using Reactive Forms</div></div><div _ngcontent-sc0="" class="chapter ng-tns-c0-0 chapter4 ng-star-inserted"><div _ngcontent-sc0="" class="number light-gray">5</div><div _ngcontent-sc0="" class="title is-size-5">Building a PWA Survey Application using Angular Service Worker</div></div><div _ngcontent-sc0="" class="chapter ng-tns-c0-0 chapter5 ng-star-inserted"><div _ngcontent-sc0="" class="number light-gray">6</div><div _ngcontent-sc0="" class="title is-size-5">Building an Auditing application using Angular and Ionic</div></div></div><div _ngcontent-sc0="" class="flex-1 book-cover"><img _ngcontent-sc0="" class="ng-tns-c0-0" alt="" src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9781789536645_cover.png"></div><div _ngcontent-sc0="" class="flex-1 right"><!----><div _ngcontent-sc0="" class="chapter ng-tns-c0-0 chapter6 ng-star-inserted"><div _ngcontent-sc0="" class="number light-gray">7</div><div _ngcontent-sc0="" class="title">Server Side Rendering our Personal SPA Blog using Angular Universal</div></div><div _ngcontent-sc0="" class="chapter ng-tns-c0-0 chapter7 ng-star-inserted"><div _ngcontent-sc0="" class="number light-gray">8</div><div _ngcontent-sc0="" class="title">Building an enterprise portal using Nx, NgRx and Redux</div></div><div _ngcontent-sc0="" class="chapter ng-tns-c0-0 chapter8 ng-star-inserted"><div _ngcontent-sc0="" class="number light-gray">9</div><div _ngcontent-sc0="" class="title">Building cross-platform image processing app using NativeScript and Firebase MLkit</div></div><div _ngcontent-sc0="" class="chapter ng-tns-c0-0 chapter9 ng-star-inserted"><div _ngcontent-sc0="" class="number light-gray">10</div><div _ngcontent-sc0="" class="title">Building a Component library using Angular CLI and CDK</div></div><div _ngcontent-sc0="" class="chapter ng-tns-c0-0 chapter10 ng-star-inserted"><div _ngcontent-sc0="" class="number light-gray">11</div><div _ngcontent-sc0="" class="title">Testing Angular Application using Jasmine and Jest</div></div></div></div></div></section><section _ngcontent-sc0="" class="white-bg benefits"><div _ngcontent-sc0="" class="container"><div _ngcontent-sc0="" class="flex-row"><div _ngcontent-sc0="" class="flex-1"><h2 _ngcontent-sc0="" class="is-size-5 orange">BENEFITS</h2><p _ngcontent-sc0="" class="is-size-1 landing-title">What you can learn with this Angular Book</p></div></div><div _ngcontent-sc0="" class="flex-row"><div _ngcontent-sc0="" class="flex-1 anim"><div _ngcontent-sc0="" class="benefit"><h3 _ngcontent-sc0="" class="orange"><svg _ngcontent-sc0="" class="ng-tns-c0-0" height="30" viewBox="0 0 1024 1024" width="30" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-sc0="" class="ng-tns-c0-0" d="M222.666 833.204l-41.334 41.334v133.463h-41.334v-92.129l-53.44 53.44-29.226-29.226 56.083-56.083H15.998v-41.334h138.749l41.334-41.334H98.664v-41.334h138.749l219.958-219.958-28.042-28.042 124-41.334-41.334 124-25.398-25.398-222.602 222.602v133.463h-41.334v-92.129zm-50.47-114.538c-46.504-71.323-73.529-156.506-73.529-248C98.667 219.561 302.229 16 553.333 16s454.666 203.561 454.666 454.666-203.561 454.666-454.666 454.666c-91.494 0-176.677-27.025-248-73.529v-44.302l3.522-3.522c68.467 50.304 153.003 80.02 244.478 80.02 228.277 0 413.334-185.055 413.334-413.334S781.612 57.331 553.333 57.331c-228.277 0-413.334 185.055-413.334 413.334 0 92.067 30.101 177.104 81 245.807l-2.193 2.193h-46.609zM429.47 476.532c-.09-1.944-.137-3.899-.137-5.866 0-68.483 55.517-124 124-124s124 55.517 124 124-55.517 124-124 124c-1.966 0-3.921-.046-5.866-.137l11.665-40.827.615-.615c42.659-3.273 76.252-38.924 76.252-82.421 0-45.655-37.011-82.666-82.666-82.666-43.649 0-79.398 33.83-82.455 76.702l-41.409 11.831zM310.082 627.391C280.924 582.228 264 528.424 264 470.667c0-159.794 129.538-289.334 289.334-289.334s289.334 129.538 289.334 289.334c0 159.794-129.538 289.334-289.334 289.334-57.159 0-110.446-16.574-155.318-45.18l30.063-30.063c36.759 21.553 79.564 33.909 125.255 33.909 136.967 0 248-111.033 248-248s-111.033-248-248-248c-136.967 0-248 111.033-248 248 0 46.294 12.684 89.624 34.767 126.706l-30.019 30.019z" fill="#e7692c"></path></svg><div _ngcontent-sc0="" class="ng-tns-c0-0">Best practices</div></h3><p _ngcontent-sc0="" class="is-size-5">The book follows the best practices that are approved by Angular Team. </p></div></div><div _ngcontent-sc0="" class="flex-1"><div _ngcontent-sc0="" class="benefit"><h3 _ngcontent-sc0="" class="orange"><svg _ngcontent-sc0="" class="ng-tns-c0-0" height="30" viewBox="0 0 1024 1024" width="30" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-sc0="" class="ng-tns-c0-0" d="M907.328 43.328c3.68-3.68 5.344-8.928 4.448-14.048s-4.224-9.504-8.96-11.712C829.504-16.992 742.496-1.824 685.28 55.68c-54.336 54.688-73.312 140.576-47.968 212.384L268.064 637.312C248 630.144 226.56 626.56 204.192 626.56c-54.848 0-108.032 21.824-145.888 59.904-57.024 57.344-73.088 142.08-40.992 215.904 2.112 4.864 6.496 8.384 11.712 9.344 5.248.992 10.592-.672 14.304-4.448L155.04 794.976c7.36-7.424 19.232-8.416 25.376-2.176l48.224 50.464c7.008 7.072 6.688 17.984-.704 25.44l-111.296 112c-3.68 3.68-5.312 8.928-4.416 14.048s4.224 9.472 8.928 11.68c26.528 12.512 54.432 18.816 82.912 18.816 50.304 0 98.08-20.224 134.624-56.96 54.336-54.656 73.312-140.544 47.936-212.352l369.248-369.28c20.096 7.168 41.536 10.752 63.904 10.752 54.848 0 108.032-21.824 145.888-59.904 57.024-57.344 73.088-142.08 40.992-215.904-2.112-4.864-6.496-8.384-11.712-9.344-5.152-.896-10.56.672-14.304 4.448L868.928 228.992c-6.88 6.912-18.56 6.848-25.632-.32l-47.968-47.968c-7.232-7.264-7.2-18.176-.032-25.408L907.328 43.328zm-134.656 160l47.968 47.968c19.168 19.264 52 19.36 70.976.288l93.76-94.208c15.008 55.712-.512 115.488-42.368 157.632-31.904 32.096-76.768 50.464-123.2 50.464-21.856 0-42.56-4.096-61.536-12.16-6.016-2.592-12.96-1.184-17.568 3.392l-384 384c-4.608 4.608-5.952 11.52-3.424 17.504 25.696 61.12 10.048 140-37.216 187.552-42.272 42.496-103.808 57.632-159.52 40.256l94.112-94.72c19.872-20 20.192-51.008.928-70.336l-48.192-50.464c-18.592-18.72-51.648-17.568-70.976 1.984l-93.76 94.208c-15.008-55.712.512-115.488 42.368-157.632 31.904-32.096 76.768-50.464 123.2-50.464 21.856 0 42.56 4.096 61.536 12.16 5.984 2.624 12.96 1.184 17.568-3.392l384-384c4.608-4.608 5.952-11.52 3.424-17.504-25.696-61.12-10.048-140.032 37.216-187.584 42.24-42.496 103.744-57.536 159.424-40.256l-94.72 94.752c-19.712 19.744-19.712 50.72 0 70.56zM934.72 980.704c-7.072 7.104-19.328 7.104-26.464-.064l-320.96-320c-6.24-6.176-16.384-6.208-22.624.064-6.24 6.24-6.208 16.384.032 22.624l320.928 319.936c9.6 9.632 22.336 14.944 35.904 14.944 13.568 0 26.304-5.312 36.096-15.168l45.728-47.776c19.68-19.776 19.68-50.784-.032-70.592l-320-320c-6.24-6.24-16.384-6.24-22.624 0s-6.24 16.384 0 22.624l319.968 319.968c7.328 7.36 7.328 18.048-.224 25.664l-45.728 47.776zM187.328 100.672l-96-96c-6.24-6.24-16.384-6.24-22.624 0l-64 64c-6.24 6.24-6.24 16.384 0 22.624l96 96c3.104 3.136 7.2 4.704 11.296 4.704s8.192-1.568 11.328-4.672L144 166.624l244.672 244.672C391.808 414.432 395.904 416 400 416s8.192-1.568 11.328-4.672c6.24-6.24 6.24-16.384 0-22.624L166.624 144l20.672-20.672c6.272-6.272 6.272-16.384.032-22.656zM112 153.376L38.624 80 80 38.624 153.376 112 112 153.376z" fill="#e7692c"></path></svg><div _ngcontent-sc0="" class="ng-tns-c0-0">Processes and tools</div></h3><p _ngcontent-sc0="" class="is-size-5">It showcases different tools that allow for the highest level of cooperation and the highest quality of work. </p></div></div><div _ngcontent-sc0="" class="flex-1"><div _ngcontent-sc0="" class="benefit"><h3 _ngcontent-sc0="" class="orange"><svg _ngcontent-sc0="" class="ng-tns-c0-0" height="30" viewBox="0 0 1024 1024" width="30" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-sc0="" class="ng-tns-c0-0" d="M624 96h16l192 224v576.295C832 931.258 803.383 960 768.082 960H287.917c-35.408 0-63.918-28.759-63.918-64.235V160.234c0-35.488 28.693-64.235 64.088-64.235h335.912zm-16 32H287.858C270.263 128 256 142.568 256 159.855v736.291c0 17.593 14.551 31.855 31.999 31.855h480.003c17.672 0 31.999-14.238 31.999-31.789V352.001H671.934c-35.309 0-63.933-28.37-63.933-64.189V128.001zm32 16v143.719C640 305.547 654.421 320 671.896 320h118.503L640.001 144zM384 544l288 144-288 144V544zm32 51.2v185.6L601.602 688 416 595.2z" fill="#e7692c"></path></svg><div _ngcontent-sc0="" class="ng-tns-c0-0">Code In Action</div></h3><p _ngcontent-sc0="" class="is-size-5">It showcases different tools that allow for the highest level of cooperation and the highest quality of work. </p></div></div></div></div></section><section _ngcontent-sc0="" class="white-bg topics"><div _ngcontent-sc0="" class="container"><h2 _ngcontent-sc0="" class="is-size-5 orange">TOOLS</h2><p _ngcontent-sc0="" class="is-size-1 landing-title">Tools used in the book!</p><div _ngcontent-sc0="" class="flex-row"><!----><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Angular"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/assets/images/logos/angular/angular.png" alt="Angular"><div _ngcontent-sc0="" class="ng-tns-c0-0">Angular</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Angular provides Angular Animation package which lets you animate pages, repeated content and conditional content"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/generated/images/marketing/concept-icons/animations.png" alt="Animations"><div _ngcontent-sc0="" class="ng-tns-c0-0">Animations</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Augury"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/generated/images/marketing/concept-icons/augury.png" alt="Augury"><div _ngcontent-sc0="" class="ng-tns-c0-0">Augury</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="CDK"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/generated/images/marketing/concept-icons/cdk.png" alt="CDK"><div _ngcontent-sc0="" class="ng-tns-c0-0">CDK</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="CLI"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/generated/images/marketing/concept-icons/cli.svg" alt="CLI"><div _ngcontent-sc0="" class="ng-tns-c0-0">CLI</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Forms"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/generated/images/marketing/concept-icons/forms.png" alt="Forms"><div _ngcontent-sc0="" class="ng-tns-c0-0">Forms</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="HTTP"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/generated/images/marketing/concept-icons/http.png" alt="HTTP"><div _ngcontent-sc0="" class="ng-tns-c0-0">HTTP</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Language Services"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/generated/images/marketing/concept-icons/language-services.png" alt="Language Services"><div _ngcontent-sc0="" class="ng-tns-c0-0">Language Services</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Material"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/generated/images/marketing/concept-icons/material.png" alt="Material"><div _ngcontent-sc0="" class="ng-tns-c0-0">Material</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Router"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/generated/images/marketing/concept-icons/router.png" alt="Router"><div _ngcontent-sc0="" class="ng-tns-c0-0">Router</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Universal"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/generated/images/marketing/concept-icons/universal.png" alt="Universal"><div _ngcontent-sc0="" class="ng-tns-c0-0">Universal</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Formly"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://raw.githubusercontent.com/formly-js/angular-formly/master/other/logo/angular-formly-logo-64px.png" alt="Formly"><div _ngcontent-sc0="" class="ng-tns-c0-0">Formly</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Clarity Design"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://clarity.design/clarity-logo.3eb8bfa14838aba69688.svg" alt="Clarity Design"><div _ngcontent-sc0="" class="ng-tns-c0-0">Clarity Design</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Momentum Design"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://avatars1.githubusercontent.com/u/19691026?s=200&amp;v=4" alt="Momentum Design"><div _ngcontent-sc0="" class="ng-tns-c0-0">Momentum Design</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Angular Console"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angularconsole.com/assets/img/logo@2x.png" alt="Angular Console"><div _ngcontent-sc0="" class="ng-tns-c0-0">Angular Console</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="VSCode"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png" alt="VSCode"><div _ngcontent-sc0="" class="ng-tns-c0-0">VSCode</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Zeit Now"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://assets.zeit.co/image/upload/front/assets/design/now-black.svg" alt="Zeit Now"><div _ngcontent-sc0="" class="ng-tns-c0-0">Zeit Now</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Auth 0"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://docs.humio.com/integrations/auth0.svg" alt="Auth 0"><div _ngcontent-sc0="" class="ng-tns-c0-0">Auth 0</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Ionic"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://png.pngtree.com/svg/20170719/ionic_1307248.png" alt="Ionic"><div _ngcontent-sc0="" class="ng-tns-c0-0">Ionic</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="NGRX"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://avatars0.githubusercontent.com/u/16272733?s=200&amp;v=4" alt="NGRX"><div _ngcontent-sc0="" class="ng-tns-c0-0">NGRX</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="NX"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://images.ctfassets.net/8eyogtwep6d2/6qoOl00vRYyoEk4MI4ae0w/a0bd92966fb8737db6da63ea0afc4646/nx-logo.png" alt="NX"><div _ngcontent-sc0="" class="ng-tns-c0-0">NX</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="NativeScript"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://cdn-images-1.medium.com/max/272/1*YVyVa_5CAC_CkhrmgNS2Eg.png" alt="NativeScript"><div _ngcontent-sc0="" class="ng-tns-c0-0">NativeScript</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="RXJS"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://rxjs-dev.firebaseapp.com/generated/images/marketing/home/Rx_Logo-512-512.png" alt="RXJS"><div _ngcontent-sc0="" class="ng-tns-c0-0">RXJS</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="ngx-translate"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://avatars1.githubusercontent.com/u/24717852?s=200&amp;v=4" alt="ngx-translate"><div _ngcontent-sc0="" class="ng-tns-c0-0">ngx-translate</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Firebase"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg" alt="Firebase"><div _ngcontent-sc0="" class="ng-tns-c0-0">Firebase</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="ngx-seo"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://avatars1.githubusercontent.com/u/24717852?s=200&amp;v=4" alt="ngx-seo"><div _ngcontent-sc0="" class="ng-tns-c0-0">ngx-seo</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="PWA"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/generated/images/marketing/concept-icons/pwa.svg" alt="PWA"><div _ngcontent-sc0="" class="ng-tns-c0-0">PWA</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Karma"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/generated/images/marketing/concept-icons/karma.svg" alt="Karma"><div _ngcontent-sc0="" class="ng-tns-c0-0">Karma</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Protractor"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/generated/images/marketing/concept-icons/protractor.svg" alt="Protractor"><div _ngcontent-sc0="" class="ng-tns-c0-0">Protractor</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Element"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://angular.io/generated/images/marketing/concept-icons/components.svg" alt="Element"><div _ngcontent-sc0="" class="ng-tns-c0-0">Element</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Jest"><!----><img _ngcontent-sc0="" class="ng-tns-c0-0 ng-star-inserted" src="https://camo.githubusercontent.com/b5639de5cfa97c51598b60b13a1061498afe2acb/68747470733a2f2f64337676366c703535716a6171632e636c6f756466726f6e742e6e65742f6974656d732f3244324b343533313278304d31713243306133502f6a6573742d6c6f676f2e737667" alt="Jest"><div _ngcontent-sc0="" class="ng-tns-c0-0">Jest</div></div><div _ngcontent-sc0="" class="flex-1 topic ng-tns-c0-0 ng-star-inserted" data-tooltip="Bundle Analyzers"><!----><div _ngcontent-sc0="" class="ng-tns-c0-0">Bundle Analyzers</div></div></div></div></section><section _ngcontent-sc0="" class="author"><div _ngcontent-sc0="" class="container"><div _ngcontent-sc0="" class="flex-row flex-"><div _ngcontent-sc0="" class="flex-1 author-animation"><div _ngcontent-sc0="" class="round-img"><img _ngcontent-sc0="" class="ng-tns-c0-0" alt="" src="https://pbs.twimg.com/profile_images/1088676437203111942/JshWVPTw_400x400.jpg"></div></div><div _ngcontent-sc0="" class="flex-2"><h2 _ngcontent-sc0="" class="is-size-2 author-animation">Hi, I'm Zama Khan Mohammed, the author of the book</h2><p _ngcontent-sc0="" class="author-animation">Zama Khan Mohammed is a Software Architect, building Enterprise Web Applications with more than 7 years of experience. He has a Master’s Degree in Computer Science and has loads of experience in Software Development using technologies such as Angular, React, AWS etc. He has a keen interest in Software Development as well as Machine Learning, and he feels passionate about teaching and mentoring his interests to others.</p></div></div></div></section><section _ngcontent-sc0="" class="recommendations"><div _ngcontent-sc0="" class="white-bg padding-tb-30"><h2 _ngcontent-sc0="" class="is-size-1 text-center">WHAT PEOPLE ARE SAYING?</h2></div><div _ngcontent-sc0="" class="container"><div _ngcontent-sc0="" class="flex-row text-center"><div _ngcontent-sc0="" class="flex-1 quote"><blockquote _ngcontent-sc0="" class="italic">I wish I had this book 4 years ago, when I started working on Angular Projects. </blockquote><div _ngcontent-sc0="" class="ng-tns-c0-0">Saad Ather</div><div _ngcontent-sc0="" class="ng-tns-c0-0">Front End Engineer, Amazon</div></div><div _ngcontent-sc0="" class="flex-1 quote"><blockquote _ngcontent-sc0="" class="italic">I’d recommend Zama's book for anyone interested in becoming a better developer. </blockquote> Ruman Ul Hassan <div _ngcontent-sc0="" class="ng-tns-c0-0">Front End Engineer, VMWare</div></div><div _ngcontent-sc0="" class="flex-1 quote"><blockquote _ngcontent-sc0="" class="italic">I’m a big believer in Zama’s simple yet effective development skills—I’ve seen it work firsthand! </blockquote><div _ngcontent-sc0="" class="ng-tns-c0-0">Chris White</div><div _ngcontent-sc0="" class="ng-tns-c0-0">Solution Architect, Tekzenit</div></div></div></div></section><section _ngcontent-sc0="" class="white-bg"><h2 _ngcontent-sc0="" class="is-size-2 text-center landing-title">Become a better developer, Step up your Career</h2><p _ngcontent-sc0="" class="text-center is-size-5 light-gray">READ BY PROFESSIONALS WORKING AT:</p><div _ngcontent-sc0="" class="justify-content-center" appanimation=""><img _ngcontent-sc0="" class="ml-3 mr-3 mb-2 mt-2" alt="image" height="30" src="assets/adobe.svg"><img _ngcontent-sc0="" class="ml-3 mr-3 mb-2 mt-2" alt="image" height="30" src="assets/amazon.svg"><img _ngcontent-sc0="" class="ml-3 mr-3 mb-2 mt-2" alt="image" height="30" src="assets/ebay.svg"><img _ngcontent-sc0="" class="ml-3 mr-3 mb-2 mt-2" alt="image" height="30" src="assets/samsung.svg"><img _ngcontent-sc0="" class="ml-3 mr-3 mb-2 mt-2" alt="image" height="30" src="assets/orange.svg"><img _ngcontent-sc0="" class="ml-3 mr-3 mb-2 mt-2" alt="image" height="30" src="assets/salesforce.svg"></div><div _ngcontent-sc0="" class="justify-content-center"><img _ngcontent-sc0="" class="ml-3 mr-3 mb-2 mt-2" alt="image" height="30" src="assets/cisco.svg"><img _ngcontent-sc0="" class="ml-3 mr-3 mb-2 mt-2" alt="image" height="30" src="assets/apple.svg"><img _ngcontent-sc0="" class="ml-3 mr-3 mb-2 mt-2" alt="image" height="30" src="assets/ibm.svg"><img _ngcontent-sc0="" class="ml-3 mr-3 mb-2 mt-2" alt="image" height="30" src="assets/intel.svg"><img _ngcontent-sc0="" class="ml-3 mr-3 mb-2 mt-2" alt="image" height="30" src="assets/panasonic.svg"></div></section><section _ngcontent-sc0="" class="text-center orange-bg"><a _ngcontent-sc0="" class="ng-tns-c0-0" href="https://twitter.com/mohamedzamakhan"><h2 _ngcontent-sc0="" class="is-size-1">Questions? <br _ngcontent-sc0="" class="ng-tns-c0-0"> Shoot me a quick tweet &amp; <br _ngcontent-sc0="" class="ng-tns-c0-0"> I’d be happy to help you.</h2></a></section><div _ngcontent-sc0="" class="details"><div _ngcontent-sc0="" class="chapter-in-details"><div _ngcontent-sc0="" class="number light-gray"></div><div _ngcontent-sc0="" class="title is-size-5"></div><button _ngcontent-sc0="" class="close-btn"><svg _ngcontent-sc0="" class="ng-tns-c0-0" height="20" version="1.1" viewBox="0 0 768 768" width="20" xmlns="http://www.w3.org/2000/svg"><g _ngcontent-sc0="" class="ng-tns-c0-0" id="icomoon-ignore"></g><path _ngcontent-sc0="" class="ng-tns-c0-0" d="M607.5 205.5l-178.5 178.5 178.5 178.5-45 45-178.5-178.5-178.5 178.5-45-45 178.5-178.5-178.5-178.5 45-45 178.5 178.5 178.5-178.5z"></path></svg></button></div><!----></div></app-root>
+<script src="runtime-es2015.7c2c8ed53c732cae9756.js" type="module"></script><script src="polyfills-es2015.a6ce4f82ff4bffeb08e9.js" type="module"></script><script src="runtime-es5.f8b20787b3edb94bf0b5.js" nomodule=""></script><script src="polyfills-es5.c610e7bcf705e208d10a.js" nomodule=""></script><script src="main-es2015.c030cf253e4213962193.js" type="module"></script><script src="main-es5.30575c8d6cddbb7546e6.js" nomodule=""></script>
+
+</body></html>
