@@ -1,10 +1,10 @@
-import { Component, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, ElementRef, Inject, PLATFORM_ID, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { stagger, trigger, style, animate, AnimationBuilder, query, transition } from '@angular/animations';
 import { isPlatformBrowser } from '@angular/common';
 
 function checkVisible(elm) {
-  var rect = elm.getBoundingClientRect();
-  var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+  const rect = elm.getBoundingClientRect();
+  const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
   return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
 }
 
@@ -14,17 +14,18 @@ const mouse = {
   _y: 0,
   x: 0,
   y: 0,
-  updatePosition: function (event) {
-    var e = event || window.event;
+  updatePosition(event) {
+    // tslint:disable-next-line
+    const e = event || window.event;
     this.x = e.clientX - this._x;
     this.y = (e.clientY - this._y) * -1;
   },
-  setOrigin: function (e) {
+  setOrigin(e) {
     this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
     this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
   },
-  show: function () {
-    return "(" + this.x + ", " + this.y + ")";
+  show() {
+    return '(' + this.x + ', ' + this.y + ')';
   }
 };
 
@@ -45,8 +46,8 @@ const getAnimation = (selector, time) => {
       style({ transform: 'translateY(100%)', opacity: 0 }),
       /* final */
       animate('.6s cubic-bezier(.8, -0.6, 0.2, 1.5)', style({ transform: 'translateY(0)', opacity: 1 }))
-    ])])
-}
+    ])]);
+};
 
 @Component({
   selector: 'app-root',
@@ -63,7 +64,7 @@ const getAnimation = (selector, time) => {
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   name = 'Angular';
   animated = {};
   animatedDetails;
@@ -89,47 +90,13 @@ export class AppComponent {
       tag: '.author .author-animation',
       duration: 250
     }
-  }
+  };
   inner;
   selectedChapter: any = {};
 
   counter = 0;
   updateRate = 10;
-  isTimeToUpdate = () => {
-    return this.counter++ % this.updateRate === 0;
-  };
   startingStyle;
-
-  update = function (event) {
-    mouse.updatePosition(event);
-    this.updateTransformStyle(
-      (mouse.y / this.inner.offsetHeight / 2).toFixed(2),
-      (mouse.x / this.inner.offsetWidth / 2).toFixed(2)
-    );
-  };
-
-  updateTransformStyle = function (x, y) {
-    var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
-    this.inner.style.transform = style;
-    this.inner.style.webkitTransform = style;
-    this.inner.style.mozTransform = style;
-    this.inner.style.msTransform = style;
-    this.inner.style.oTransform = style;
-  };
-
-  onMouseEnterHandler = function (event) {
-    this.update(event);
-  };
-
-  onMouseLeaveHandler = function () {
-    this.inner.style = "";
-  };
-
-  onMouseMoveHandler = function (event) {
-    if (this.isTimeToUpdate()) {
-      this.update(event);
-    }
-  };
 
   chapters = [{
     title: 'Setting up Development Environment'
@@ -214,24 +181,24 @@ export class AppComponent {
     title: 'Momentum Design'
   }, {
     id: 15,
-    logo: "https://angularconsole.com/assets/img/logo@2x.png",
-    title: "Angular Console"
+    logo: 'https://angularconsole.com/assets/img/logo@2x.png',
+    title: 'Angular Console'
   }, {
     id: 16,
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png",
-    title: "VSCode"
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png',
+    title: 'VSCode'
   }, {
     id: 17,
     logo: 'https://assets.zeit.co/image/upload/front/assets/design/now-black.svg',
     title: 'Zeit Now'
   }, {
     id: 18,
-    logo: "https://docs.humio.com/integrations/auth0.svg",
-    title: "Auth 0"
+    logo: 'https://docs.humio.com/integrations/auth0.svg',
+    title: 'Auth 0'
   }, {
     id: 19,
     logo: 'https://png.pngtree.com/svg/20170719/ionic_1307248.png',
-    title: "Ionic"
+    title: 'Ionic'
   }, {
     id: 20,
     logo: 'https://avatars0.githubusercontent.com/u/16272733?s=200&v=4',
@@ -283,7 +250,42 @@ export class AppComponent {
   }, {
     id: 31,
     title: 'Bundle Analyzers'
-  }]
+  }];
+
+  isTimeToUpdate = () => {
+    return this.counter++ % this.updateRate === 0;
+  }
+
+  update = function(event) {
+    mouse.updatePosition(event);
+    this.updateTransformStyle(
+      (mouse.y / this.inner.offsetHeight / 2).toFixed(2),
+      (mouse.x / this.inner.offsetWidth / 2).toFixed(2)
+    );
+  };
+
+  updateTransformStyle = function(x, y) {
+    const styled = 'rotateX(' + x + 'deg) rotateY(' + y + 'deg)';
+    this.inner.style.transform = styled;
+    this.inner.style.webkitTransform = styled;
+    this.inner.style.mozTransform = styled;
+    this.inner.style.msTransform = styled;
+    this.inner.style.oTransform = styled;
+  };
+
+  onMouseEnterHandler = function(event) {
+    this.update(event);
+  };
+
+  onMouseLeaveHandler = function() {
+    this.inner.style = '';
+  };
+
+  onMouseMoveHandler = function(event) {
+    if (this.isTimeToUpdate()) {
+      this.update(event);
+    }
+  };
 
   constructor(private el: ElementRef, private animationBuilder: AnimationBuilder, @Inject(PLATFORM_ID) private platformId) {
 
@@ -295,7 +297,7 @@ export class AppComponent {
       window.addEventListener('scroll', this.scrollEvent, true);
     }
     const colors = ['#e7692c', '#df002a', '#112b39'];
-    var blobs = document.querySelectorAll("#background path");
+    const blobs = document.querySelectorAll('#background path');
 
     blobs.forEach((blob: any) => {
       blob.style.fill = colors[Math.floor(Math.random() * colors.length)];
@@ -306,7 +308,7 @@ export class AppComponent {
     if (isPlatformBrowser(this.platformId)) {
       this.scrollEvent();
     }
-    this.inner = this.el.nativeElement.querySelector(".book-cover img");
+    this.inner = this.el.nativeElement.querySelector('.book-cover img');
     const container = this.el.nativeElement.querySelector('.book-cover');
     mouse.setOrigin(container);
   }
@@ -320,7 +322,7 @@ export class AppComponent {
   buildAnimation(selector, time = 500) {
     return this.animationBuilder.build([
       getAnimation(selector, time)
-    ])
+    ]);
   }
 
   toFullScreen(e: any, chapter) {
@@ -339,12 +341,12 @@ export class AppComponent {
         style(this.startingStyle),
         animate('.6s cubic-bezier(0.25, 0.8, 0.25, 1)', style({ top: 0, width: '100vw', height: '100vh', left: 0, borderRadius: 0 }))
       ])
-    ])
+    ]);
     this.animatedDetails = true;
 
     setTimeout(() => {
       details.classList.add('animated');
-    }, 600)
+    }, 600);
 
     animation.create(this.el.nativeElement).play();
   }
@@ -357,7 +359,7 @@ export class AppComponent {
         style({ top: 0, width: '100vw', height: '100vh', left: 0, borderRadius: 0 }),
         animate('.6s ease', style({ ...this.startingStyle, borderRadius: '6px' }))
       ])
-    ])
+    ]);
     details.classList.remove('animated');
     this.animatedDetails = false;
 
@@ -377,6 +379,6 @@ export class AppComponent {
         const animation = this.buildAnimation(this.animation[key].tag, this.animation[key].duration);
         animation.create(this.el.nativeElement).play();
       }
-    })
+    });
   }
 }
