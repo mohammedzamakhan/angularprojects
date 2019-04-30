@@ -1,4 +1,3 @@
-
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -12,12 +11,12 @@
 }
 
 .buttons {
-  display: flex
+  display: flex;
 }
 
 .buttons button {
   flex: 1;
-  font-size: 18px
+  font-size: 18px;
 }
 
 .book {
@@ -40,8 +39,8 @@
 }
 
 nav a {
-  margin-right: 10px;
   color: white;
+  margin-right: 18px;
 }
 
 .padding-tb-30 {
@@ -57,16 +56,15 @@ nav a {
   display: flex;
   padding: 20px;
   align-items: center;
-  box-shadow: 0 10px 20px 0 rgba(116,103,91,.059);
-  transition: all .5s ease;
-  cursor: pointer
+  box-shadow: 0 10px 20px 0 rgba(116, 103, 91, 0.059);
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .book-cover {
   order: -1;
   text-align: center;
   perspective: 100px;
-
 }
 
 .packt-publishing img {
@@ -74,38 +72,15 @@ nav a {
 }
 
 .book-cover img {
-    transition: transform 0.5s;
+  transition: transform 0.5s;
 }
 
-@media (min-width: 500px) {
-  .packt-publishing div {
-    display: inline
-  }
-  .packt-publishing img {
-  display: inline;
-}
-   .chapter {
-       width: 90%;
-   }
-   .book-cover {
-  order: 0;
-  transform: scale(1.2);
-}
-.right .chapter {
-  float: right;
-}
 
-   .book-cover img {
-      width: 100%;
-      position: relative;
-      top: 70px;
-    }
-}
 
 .chapter:hover {
-  box-shadow: 0 10px 25px 0 rgba(116,103,91,.3);
+  box-shadow: 0 10px 25px 0 rgba(116, 103, 91, 0.3);
   background: #e7692c;
-  color: white
+  color: white;
 }
 
 .number {
@@ -120,19 +95,24 @@ nav a {
 .round-img {
   border-radius: 50%;
   text-align: center;
-
 }
 
 .round-img img {
   border-radius: 290486px;
-  width: 50%;
+  width: 70%;
   margin: 30px;
 }
 .left {
-  float: left
+  float: left;
 }
 .right {
-  float: right
+  float: right;
+}
+
+nav .right {
+  display: none;
+  position: relative;
+  top: 7px;
 }
 
 .justify-content-center {
@@ -148,7 +128,6 @@ nav a {
 
 .white-bg {
   background: white;
-
 }
 
 .benefits .orange div {
@@ -161,22 +140,22 @@ nav a {
   color: #e7692c;
 }
 
-.landing-title {
+.landing-title.is-size-1 {
   margin-top: 0;
 }
 
 .landing-title:after {
-    top: 0;
-    left: 0;
-    position: relative;
-    width: 35px;
-    height: 2px;
-    display: inherit;
-    background-color: #e7692c;
-    content: "";
-    left: 50%;
-    margin-top: 17px;
-    transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  position: relative;
+  width: 35px;
+  height: 2px;
+  display: inherit;
+  background-color: #e7692c;
+  content: "";
+  left: 50%;
+  margin-top: 17px;
+  transform: translateX(-50%);
 }
 
 .content .landing-title:after {
@@ -186,6 +165,7 @@ nav a {
 .orange-bg {
   background: #e7692c;
   color: white;
+  margin-top: 0;
 }
 
 .orange-bg a {
@@ -227,25 +207,24 @@ blockquote {
 
 blockquote:before {
   color: #ccc;
-  content: '“';
+  content: "“";
   font-size: 5em;
   line-height: 0em;
   margin-right: 0.1em;
   vertical-align: -0.4em;
 }
 
-
 .quote {
   background: white;
   border-radius: 6px;
-  box-shadow: 0 30px 20px 0 rgba(116,103,91,.059);
+  box-shadow: 0 30px 20px 0 rgba(116, 103, 91, 0.059);
   padding-bottom: 20px;
   border: 1px solid transparent;
 }
 
 .quote:hover {
   box-shadow: none;
-  border: 1px solid #e7692c
+  border: 1px solid #e7692c;
 }
 
 .details {
@@ -271,7 +250,7 @@ blockquote:before {
 
 .details.animated .content {
   overflow: auto;
-  height: calc(100vh - 100px)
+  height: calc(100vh - 100px);
 }
 
 .details.animated .title {
@@ -302,50 +281,42 @@ blockquote:before {
 
 /* Basic styling */
 .ng-proj-title {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    height: 75px;
-    width: 305px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  height: 75px;
+  width: 305px;
 }
-
 
 .filled-heading {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: "Poppins","Helvetica Neue",Arial,Helvetica,Verdana;
-    font-size: 1.9em;
-    line-height: 0.5;
-    text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "CiscoSansTT Light", "Helvetica Neue", Arial, Helvetica, Verdana;
+  font-size: 1.9em;
+  line-height: 0.5;
+  text-align: center;
 }
 
-@media (min-width: 500px) {
-  .ng-proj-title {
-    height: 75px;
-    width: 459px;
-  }
-.filled-heading {
-    font-size: 2.8em;
-    line-height: 0.5;
-}
-}
 /* Animate the background shapes */
 #background path {
-    transform-origin: 50% 50%;
-    transform-box: fill-box;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
 }
 #background path:nth-of-type(2n) {
-    animation: rotate 5s linear infinite;
+  animation: rotate 5s linear infinite;
 }
 #background path:nth-of-type(2n + 1) {
-    animation: rotate 3s linear reverse infinite;
+  animation: rotate 3s linear reverse infinite;
 }
 
 @keyframes rotate {
-    0% { transform: rotate(0); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
 
 .topics img {
   width: 45px;
@@ -356,8 +327,10 @@ blockquote:before {
   text-align: center;
 }
 
-.benefits, .topics {
+.benefits,
+.topics {
   text-align: center;
+  margin-top: 0;
 }
 
 [data-tooltip]:before {
@@ -369,28 +342,87 @@ blockquote:before {
 }
 
 [data-tooltip]:after {
-    opacity: 0;
-    pointer-events: none;
-    font-size: 12px !important;
-    background: #e7692c;
-    border-radius: 4px;
-    color: #fff;
-    content: attr(data-tooltip);
-    padding: .5em 1em;
-    position: absolute;
-    z-index: 10;
-    bottom: 100%;
-    left: 50%;
-    margin-bottom: 11px;
-    transform-origin: top;
-    white-space: normal;
-    width: 300px;
-    line-height: 20px;
-    font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  background: #e7692c;
+  border-radius: 4px;
+  color: #fff;
+  content: attr(data-tooltip);
+  padding: 0.5em 1em;
+  position: absolute;
+  z-index: 10;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 11px;
+  transform-origin: top;
+  white-space: normal;
+  width: 300px;
+  line-height: 20px;
+  font-size: 14px!important;
 }
 
 [data-tooltip]:hover:after {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, 0);
+}
+
+.author {
+  padding-bottom: 0;
+
+  .round-img {
+    position: relative;
+    top: -20px;
+  }
+}
+
+.chapters {
+  padding-bottom: 0;
+}
+
+.recommendations {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.companies {
+  margin-top: 0;
+}
+
+@media (min-width: 500px) {
+  .packt-publishing div {
+    display: inline;
+  }
+  .packt-publishing img {
+    display: inline;
+  }
+  .chapter {
+    width: 90%;
+  }
+  .book-cover {
+    order: 0;
+    transform: scale(1.2);
+  }
+  .right .chapter {
+    float: right;
+  }
+
+  nav .right {
+    display: block;
+  }
+
+  .book-cover img {
+    width: 100%;
+    position: relative;
+    top: 70px;
+  }
+
+  .ng-proj-title {
+    height: 75px;
+    width: 459px;
+  }
+  .filled-heading {
+    font-size: 2.8em;
+    line-height: 0.5;
+  }
 }
