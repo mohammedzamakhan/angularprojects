@@ -255,7 +255,7 @@ blockquote:before {
 
 .details.animated .content {
   overflow: auto;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
 }
 
 .details.animated .title {
@@ -446,4 +446,19 @@ blockquote:before {
 
 ol {
   line-height: 24px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.ipad {
+  width: 100%;
 }

@@ -349,6 +349,9 @@
         >
           <div class="number light-gray">{{ i + 1 }}</div>
           <h3 class="title is-size-5">{{ chapter.title }}</h3>
+          <div class="sr-only">
+            <ng-container *ngTemplateOutlet="chapter.about"></ng-container>
+          </div>
         </div>
       </div>
       <div
@@ -371,6 +374,9 @@
         >
           <div class="number light-gray">{{ i + 7 }}</div>
           <h3 class="title">{{ chapter.title }}</h3>
+          <div class="sr-only">
+            <ng-container *ngTemplateOutlet="chapter.about"></ng-container>
+          </div>
         </div>
       </div>
     </div>
@@ -669,302 +675,332 @@
   <div class="content " @details *ngIf="animatedDetails">
     <div class="container" *ngIf="selectedChapter.index === 1">
       <h1 class="is-size-1 landing-title text-center">About this Chapter</h1>
-      <p>
-        In this book, we will be covering different kinds of projects, from
-        basic Angular App to a Server rendered, Native App for Android and iOS.
-        We will also be looking at how to create Component library for our
-        enterprise applications and testing our components.
-      </p>
-
-      <p>
-        Angular Apps are written using Web Technologies and to run Angular Apps
-        we first need Node.js to be installed on our machines.
-      </p>
-
-      <p>
-        Angular is build using TypeScript, which is a superscript of ECMAScript.
-        It adds support for types in JavaScript, which makes the development of
-        Angular Apps easier on compile time. We will look into some basic
-        concepts of TypeScript in this chapter, which will clear some syntax
-        that we will be using in this book.
-      </p>
-      <p>
-        Another tool we will look in here, is Angular CLI, the command line
-        interface program that Angular Team has created, which helps in the
-        development and maintenance of Angular Apps.
-      </p>
-      <p>
-        We could write Angular Apps using a simple text editor, but to get full
-        productivity of building Angular Application we would be using VSCode,
-        which isn’t an Integrated Development Environment (IDE) but is a code
-        editor with rich extension support. In this chapter, we will use VSCode
-        and install the required extensions to make Angular Development faster.
-      </p>
-      <p>The following topics will be covered in this chapter:</p>
-      <ol>
-        <li>Understanding the basics of TypeScript</li>
-        <li>Installing Angular CLI and Angular Console</li>
-        <li>Installing VSCode and installing various extensions</li>
-        <li>
-          Installing Augury and seeing various sections that help us in
-          debugging our application
-        </li>
-      </ol>
+      <ng-container *ngTemplateOutlet="chapter1"></ng-container>
     </div>
     <div class="container" *ngIf="selectedChapter.index === 2">
       <h1 class="is-size-1 landing-title text-center">About this Chapter</h1>
 
-      <p>
-        In this chapter, we will develop a basic Angular App for a Flashcard
-        game. We will also introduce some of the build-in Attribute and
-        Structural directives in Angular Framework, and create a basic template
-        driven form to add/edit the flashcards. We will get introduced to
-        Observables and learn how to use the async pipe to get observable data
-        on the page. We will also create a basic FlashService to do all the
-        operations related to adding, editing, and deleting flash.
-      </p>
-
-      <p>The following topics will be covered in this chapter:</p>
-
-      <ol>
-        <li>
-          Different decorators in Angular like @Input, @Output, @ViewChild.
-        </li>
-        <li>
-          Different build-in Attribute and Structural Directives in Angular
-        </li>
-        <li>How to create a simple Template Driven forms</li>
-        <li>Services in Angular</li>
-        <li>Importance of Observables in Angular</li>
-      </ol>
+      <ng-container *ngTemplateOutlet="chapter2"></ng-container>
+      <img class="ipad" src="assets/iPad.png" alt="" />
     </div>
 
     <div class="container" *ngIf="selectedChapter.index === 3">
       <h1 class="is-size-1 landing-title text-center">About this Chapter</h1>
-
-      <p>
-        In this chapter, we will create a Personal Blog using Angular. We will
-        create it as a Single Page Application (SPA) using Angular Router.
-        Single Page Applications has a benefit of loading most of the
-        application on our initial load, which gives a benefit when you browse
-        the website a bit more. When going from one page to another, SPA doesn't
-        have to download the whole page but only request the required API for
-        the page, which is way faster.
-      </p>
-
-      <p>The following topics will be covered in this chapter:</p>
-      <ol>
-        <li>We will add Angular Router and configure multiple routes</li>
-        <li>Lazy Load our routes to make initial render faster</li>
-        <li>Http calls to connect to an API and display data using it.</li>
-        <li>Preloading Strategy to make the page transition faster</li>
-        <li>Animations to make add meaning to our application.</li>
-      </ol>
+      <ng-container *ngTemplateOutlet="chapter3"></ng-container>
     </div>
 
     <div class="container" *ngIf="selectedChapter.index === 4">
       <h1 class="is-size-1 landing-title text-center">About this Chapter</h1>
-
-      <p>
-        In this Chapter, we will be creating an application for managing
-        inventory. We will be displaying products and doing CRUD (Create, Read,
-        Update and Delete) operations. We will be introduced to Reactive Forms
-        in this chapter, which is the best way of creating forms in Angular
-        because you will have more control over the form as well as you can
-        create complex forms using it.
-      </p>
-
-      <p>The following topics will be covered in this chapter:</p>
-      <ol>
-        <li>Use of third party Angular Components using Clarity Components</li>
-        <li>Reactive Forms</li>
-        <li>Using in build validation provided by Angular</li>
-        <li>Creating custom validation for your form</li>
-      </ol>
+      <ng-container *ngTemplateOutlet="chapter4"></ng-container>
     </div>
 
     <div class="container" *ngIf="selectedChapter.index === 5">
       <h1 class="is-size-1 landing-title text-center">About this Chapter</h1>
-
-      <p>
-        In this chapter, we will be creating an e-commerce application for an
-        electronic store, and then convert it into a Progressive Web App, add
-        support for offline, and also able to add the web app as an application
-        on the home screen on both Android and iOS. We will also set up a
-        nest.js application to get data from MongoDB in this chapter.
-      </p>
-
-      <p>The following topics will be covered in this chapter:</p>
-
-      <ol>
-        <li>We will create a nest.js application for backend service</li>
-        <li>
-          We will use Angular Material to create a simple e-commerce application
-        </li>
-        <li>
-          We will use lighthouse to measure and analyze our application for PWA.
-        </li>
-        <li>
-          We will convert our application to score perfect 100 on the lighthouse
-          for PWA
-        </li>
-        <li>We will make our application run offline</li>
-        <li>We will deploy our application on firebase hosting</li>
-      </ol>
+      <ng-container *ngTemplateOutlet="chapter5"></ng-container>
     </div>
 
     <div class="container" *ngIf="selectedChapter.index === 6">
       <h1 class="is-size-1 landing-title text-center">About this Chapter</h1>
-
-      <p>
-        In this chapter, we will be using Firebase Real-time Database to create
-        a Native Application that runs on iOS and Android using the Ionic
-        Framework. We will also be using ngx-formly for creating a dynamic form
-        without having to write an HTML for the whole form.
-      </p>
-
-      <p>The following topics will be covered in this chapter:</p>
-
-      <ol>
-        <li>Installing and creating an Ionic Application using Ionic CLI</li>
-        <li>Configuring Firebase Real-time Database</li>
-        <li>Getting collection from Firebase and updating it</li>
-        <li>Creating a dynamic form using ngx-formly</li>
-      </ol>
+      <ng-container *ngTemplateOutlet="chapter6"></ng-container>
     </div>
 
     <div class="container" *ngIf="selectedChapter.index === 7">
       <h1 class="is-size-1 landing-title text-center">About this Chapter</h1>
-
-      <p>
-        In this chapter, we will continue to work on our personal blog from
-        Chapter 3, Building Personal SPA Blog using Angular Router and Wordpress
-        Rest API, where we created a Single Page Application using Angular
-        Router. We will render the application on the Server so that the
-        performance and the Search Engine Optimization can be optimized. We will
-        use Transfer state to make sure that the APIs are cached when rendered
-        in the Server so that the APIs are not called redundantly on the client.
-        We will use different SEO optimizations to make it be discoverable on
-        Search Engines and shared properly on Social media platforms like
-        Twitter, Facebook, and LinkedIn
-      </p>
-
-      <p>The following topics will be covered in this chapter:</p>
-
-      <ol>
-        <li>Deploy our application on Zeit Now</li>
-        <li>Measure the performance of our application using the lighthouse</li>
-        <li>
-          Add Angular Universal to our application using one simple CLI command
-        </li>
-        <li>Transfer application state from Server to Client</li>
-        <li>
-          Optimize our application for Search Engines and Social Media scraping using ngx-seo.
-        </li>
-      </ol>
+      <ng-container *ngTemplateOutlet="chapter7"></ng-container>
     </div>
 
     <div class="container" *ngIf="selectedChapter.index === 8">
       <h1 class="is-size-1 landing-title text-center">About this Chapter</h1>
-
-      <p>
-        In this chapter, we will be creating an enterprise application for
-        admins to login and check the sales of our existing e-commerce
-        application we developed. We will be using OAuth using Auth0 to
-        authenticate users to our application and check the sales of each
-        product using D3 Visualizations. We will be using Nx workspace to create
-        our monorepo application, which will include not only our e-commerce
-        application and admin application, but also libraries that can be shared
-        by them.
-      </p>
-
-      <p>The following topics will be covered in this chapter:</p>
-      <ol>
-        <li>Upgrading an existing Angular CLI application to Nx workspace</li>
-        <li>Using high-quality components from Momentum Design</li>
-        <li>Authentication by Token-based Authentication using Auth0</li>
-        <li>Guarding routes using Angular Guards</li>
-        <li>Using JWTModule which includes HTTP interceptor</li>
-        <li>Using ngx-charts to use D3 Visualization</li>
-      </ol>
+      <ng-container *ngTemplateOutlet="chapter8"></ng-container>
     </div>
 
     <div class="container" *ngIf="selectedChapter.index === 9">
       <h1 class="is-size-1 landing-title text-center">About this Chapter</h1>
-
-      <p>
-        In this chapter, we are going to develop a Nativescript application
-        along with Angular to display news postings. We will allow the user to
-        select from a range of different languages and display news in the
-        selected language. We will be mocking the API to fetch news post for
-        different languages. We will use two languages – English and Spanish. We
-        will be using ngx-translate to add internationalization to our
-        application and end the chapter by using a nativescript plugin to use a
-        native snackbar.
-      </p>
-      <p>The following topics will be covered in this chapter:</p>
-      <ol>
-        <li>
-          Creating Nativescript application and run in on Nativescript
-          playground.
-        </li>
-        <li>Learn about different Nativescript Container Layouts</li>
-        <li>
-          Use ngx-translate to add internationalization to our application
-        </li>
-        <li>Use a nativescript plugin.</li>
-      </ol>
+      <ng-container *ngTemplateOutlet="chapter9"></ng-container>
     </div>
 
     <div class="container" *ngIf="selectedChapter.index === 10">
       <h1 class="is-size-1 landing-title text-center">About this Chapter</h1>
-
-      <p>
-        In this chapter, we will build a component library that can not only be
-        used in our applications but can also be published on npm so that it can
-        be used by any other applications that want to use our component
-        library. The reusable component libraries are something that makes teams
-        build awesome applications super fast. We will be building a dropdown
-        reusable component library that can be flexible enough for multiple
-        reusabilities in the application.
-      </p>
-      <p>The following topics will be covered in this chapter:</p>
-      <ol>
-        <li>Build a reusable dropdown component</li>
-        <li>Add accessibility features to the component library</li>
-        <li>Use Angular CDK to manage Focus for keyboard users</li>
-        <li>Publish the component library to npm</li>
-        <li>Create an Angular Element to use in any application</li>
-      </ol>
+      <ng-container *ngTemplateOutlet="chapter10"></ng-container>
     </div>
 
     <div class="container" *ngIf="selectedChapter.index === 11">
       <h1 class="is-size-1 landing-title text-center">About this Chapter</h1>
-
-      <p>
-        In our last chapter, we will cover one of the important topics in
-        Software development. We will be covering about testing our Angular
-        Application. We will start with an existing application that was built
-        using Angular CLI, and will make sure that all the existing tests pass,
-        and then add new Isolated test case, some Deep integration testing to
-        our application. We will then move on to running code coverage report
-        and setting thresholds to our coverage report. We will then move on to
-        updating our tests to use Jest as the test runner to make the testing
-        experience delightful. We will end this chapter by adding some End to
-        End tests to test the application.
-      </p>
-      <p>The following topics will be covered in this chapter:</p>
-      <ol>
-        <li>Learn about why testing is important in Software Development</li>
-        <li>
-          Understand and test using Isolated Unit testing, Deep Integration
-          testing, and Shallow Integration testing
-        </li>
-        <li>
-          Upgrade our Jasmine and Karma default setup to use Jest Test Runner
-        </li>
-        <li>Use protractor to run End to End testing of our application</li>
-      </ol>
+      <ng-container *ngTemplateOutlet="chapter11"></ng-container>
     </div>
   </div>
 </div>
+
+<ng-template #chapter1>
+  <p>
+    In this book, we will be covering different kinds of projects, from basic
+    Angular App to a Server rendered, Native App for Android and iOS. We will
+    also be looking at how to create Component library for our enterprise
+    applications and testing our components.
+  </p>
+
+  <p>
+    Angular Apps are written using Web Technologies and to run Angular Apps we
+    first need Node.js to be installed on our machines.
+  </p>
+
+  <p>
+    Angular is build using TypeScript, which is a superscript of ECMAScript. It
+    adds support for types in JavaScript, which makes the development of Angular
+    Apps easier on compile time. We will look into some basic concepts of
+    TypeScript in this chapter, which will clear some syntax that we will be
+    using in this book.
+  </p>
+  <p>
+    Another tool we will look in here, is Angular CLI, the command line
+    interface program that Angular Team has created, which helps in the
+    development and maintenance of Angular Apps.
+  </p>
+  <p>
+    We could write Angular Apps using a simple text editor, but to get full
+    productivity of building Angular Application we would be using VSCode, which
+    isn’t an Integrated Development Environment (IDE) but is a code editor with
+    rich extension support. In this chapter, we will use VSCode and install the
+    required extensions to make Angular Development faster.
+  </p>
+  <p>The following topics will be covered in this chapter:</p>
+  <ol>
+    <li>Understanding the basics of TypeScript</li>
+    <li>Installing Angular CLI and Angular Console</li>
+    <li>Installing VSCode and installing various extensions</li>
+    <li>
+      Installing Augury and seeing various sections that help us in debugging
+      our application
+    </li>
+  </ol>
+</ng-template>
+
+<ng-template #chapter2>
+  <p>
+    In this chapter, we will develop a basic Angular App for a Flashcard game.
+    We will also introduce some of the build-in Attribute and Structural
+    directives in Angular Framework, and create a basic template driven form to
+    add/edit the flashcards. We will get introduced to Observables and learn how
+    to use the async pipe to get observable data on the page. We will also
+    create a basic FlashService to do all the operations related to adding,
+    editing, and deleting flash.
+  </p>
+
+  <p>The following topics will be covered in this chapter:</p>
+
+  <ol>
+    <li>
+      Different decorators in Angular like @Input, @Output, @ViewChild.
+    </li>
+    <li>
+      Different build-in Attribute and Structural Directives in Angular
+    </li>
+    <li>How to create a simple Template Driven forms</li>
+    <li>Services in Angular</li>
+    <li>Importance of Observables in Angular</li>
+  </ol>
+</ng-template>
+
+<ng-template #chapter3>
+  <p>
+    In this chapter, we will create a Personal Blog using Angular. We will
+    create it as a Single Page Application (SPA) using Angular Router. Single
+    Page Applications has a benefit of loading most of the application on our
+    initial load, which gives a benefit when you browse the website a bit more.
+    When going from one page to another, SPA doesn't have to download the whole
+    page but only request the required API for the page, which is way faster.
+  </p>
+
+  <p>The following topics will be covered in this chapter:</p>
+  <ol>
+    <li>We will add Angular Router and configure multiple routes</li>
+    <li>Lazy Load our routes to make initial render faster</li>
+    <li>Http calls to connect to an API and display data using it.</li>
+    <li>Preloading Strategy to make the page transition faster</li>
+    <li>Animations to make add meaning to our application.</li>
+  </ol>
+</ng-template>
+
+<ng-template #chapter4>
+  <p>
+    In this Chapter, we will be creating an application for managing inventory.
+    We will be displaying products and doing CRUD (Create, Read, Update and
+    Delete) operations. We will be introduced to Reactive Forms in this chapter,
+    which is the best way of creating forms in Angular because you will have
+    more control over the form as well as you can create complex forms using it.
+  </p>
+
+  <p>The following topics will be covered in this chapter:</p>
+  <ol>
+    <li>Use of third party Angular Components using Clarity Components</li>
+    <li>Reactive Forms</li>
+    <li>Using in build validation provided by Angular</li>
+    <li>Creating custom validation for your form</li>
+  </ol>
+</ng-template>
+
+<ng-template #chapter5>
+  <p>
+    In this chapter, we will be creating an e-commerce application for an
+    electronic store, and then convert it into a Progressive Web App, add
+    support for offline, and also able to add the web app as an application on
+    the home screen on both Android and iOS. We will also set up a nest.js
+    application to get data from MongoDB in this chapter.
+  </p>
+
+  <p>The following topics will be covered in this chapter:</p>
+
+  <ol>
+    <li>We will create a nest.js application for backend service</li>
+    <li>
+      We will use Angular Material to create a simple e-commerce application
+    </li>
+    <li>
+      We will use lighthouse to measure and analyze our application for PWA.
+    </li>
+    <li>
+      We will convert our application to score perfect 100 on the lighthouse for
+      PWA
+    </li>
+    <li>We will make our application run offline</li>
+    <li>We will deploy our application on firebase hosting</li>
+  </ol>
+</ng-template>
+
+<ng-template #chapter6>
+  <p>
+    In this chapter, we will be using Firebase Real-time Database to create a
+    Native Application that runs on iOS and Android using the Ionic Framework.
+    We will also be using ngx-formly for creating a dynamic form without having
+    to write an HTML for the whole form.
+  </p>
+
+  <p>The following topics will be covered in this chapter:</p>
+
+  <ol>
+    <li>Installing and creating an Ionic Application using Ionic CLI</li>
+    <li>Configuring Firebase Real-time Database</li>
+    <li>Getting collection from Firebase and updating it</li>
+    <li>Creating a dynamic form using ngx-formly</li>
+  </ol>
+</ng-template>
+
+<ng-template #chapter7>
+  <p>
+    In this chapter, we will continue to work on our personal blog from Chapter
+    3, Building Personal SPA Blog using Angular Router and Wordpress Rest API,
+    where we created a Single Page Application using Angular Router. We will
+    render the application on the Server so that the performance and the Search
+    Engine Optimization can be optimized. We will use Transfer state to make
+    sure that the APIs are cached when rendered in the Server so that the APIs
+    are not called redundantly on the client. We will use different SEO
+    optimizations to make it be discoverable on Search Engines and shared
+    properly on Social media platforms like Twitter, Facebook, and LinkedIn
+  </p>
+
+  <p>The following topics will be covered in this chapter:</p>
+
+  <ol>
+    <li>Deploy our application on Zeit Now</li>
+    <li>Measure the performance of our application using the lighthouse</li>
+    <li>
+      Add Angular Universal to our application using one simple CLI command
+    </li>
+    <li>Transfer application state from Server to Client</li>
+    <li>
+      Optimize our application for Search Engines and Social Media scraping
+      using ngx-seo.
+    </li>
+  </ol>
+</ng-template>
+
+<ng-template #chapter8>
+  <p>
+    In this chapter, we will be creating an enterprise application for admins to
+    login and check the sales of our existing e-commerce application we
+    developed. We will be using OAuth using Auth0 to authenticate users to our
+    application and check the sales of each product using D3 Visualizations. We
+    will be using Nx workspace to create our monorepo application, which will
+    include not only our e-commerce application and admin application, but also
+    libraries that can be shared by them.
+  </p>
+
+  <p>The following topics will be covered in this chapter:</p>
+  <ol>
+    <li>Upgrading an existing Angular CLI application to Nx workspace</li>
+    <li>Using high-quality components from Momentum Design</li>
+    <li>Authentication by Token-based Authentication using Auth0</li>
+    <li>Guarding routes using Angular Guards</li>
+    <li>Using JWTModule which includes HTTP interceptor</li>
+    <li>Using ngx-charts to use D3 Visualization</li>
+  </ol>
+</ng-template>
+
+<ng-template #chapter9>
+  <p>
+    In this chapter, we are going to develop a Nativescript application along
+    with Angular to display news postings. We will allow the user to select from
+    a range of different languages and display news in the selected language. We
+    will be mocking the API to fetch news post for different languages. We will
+    use two languages – English and Spanish. We will be using ngx-translate to
+    add internationalization to our application and end the chapter by using a
+    nativescript plugin to use a native snackbar.
+  </p>
+  <p>The following topics will be covered in this chapter:</p>
+  <ol>
+    <li>
+      Creating Nativescript application and run in on Nativescript playground.
+    </li>
+    <li>Learn about different Nativescript Container Layouts</li>
+    <li>
+      Use ngx-translate to add internationalization to our application
+    </li>
+    <li>Use a nativescript plugin.</li>
+  </ol>
+</ng-template>
+
+<ng-template #chapter10>
+  <p>
+    In this chapter, we will build a component library that can not only be used
+    in our applications but can also be published on npm so that it can be used
+    by any other applications that want to use our component library. The
+    reusable component libraries are something that makes teams build awesome
+    applications super fast. We will be building a dropdown reusable component
+    library that can be flexible enough for multiple reusabilities in the
+    application.
+  </p>
+  <p>The following topics will be covered in this chapter:</p>
+  <ol>
+    <li>Build a reusable dropdown component</li>
+    <li>Add accessibility features to the component library</li>
+    <li>Use Angular CDK to manage Focus for keyboard users</li>
+    <li>Publish the component library to npm</li>
+    <li>Create an Angular Element to use in any application</li>
+  </ol>
+</ng-template>
+
+<ng-template #chapter11>
+  <p>
+    In our last chapter, we will cover one of the important topics in Software
+    development. We will be covering about testing our Angular Application. We
+    will start with an existing application that was built using Angular CLI,
+    and will make sure that all the existing tests pass, and then add new
+    Isolated test case, some Deep integration testing to our application. We
+    will then move on to running code coverage report and setting thresholds to
+    our coverage report. We will then move on to updating our tests to use Jest
+    as the test runner to make the testing experience delightful. We will end
+    this chapter by adding some End to End tests to test the application.
+  </p>
+  <p>The following topics will be covered in this chapter:</p>
+  <ol>
+    <li>Learn about why testing is important in Software Development</li>
+    <li>
+      Understand and test using Isolated Unit testing, Deep Integration testing,
+      and Shallow Integration testing
+    </li>
+    <li>
+      Upgrade our Jasmine and Karma default setup to use Jest Test Runner
+    </li>
+    <li>Use protractor to run End to End testing of our application</li>
+  </ol>
+</ng-template>

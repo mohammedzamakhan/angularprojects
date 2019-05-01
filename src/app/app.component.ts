@@ -1,4 +1,4 @@
-import { Component, ElementRef, Inject, PLATFORM_ID, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, Inject, PLATFORM_ID, OnInit, OnDestroy, AfterViewInit, ViewChild } from '@angular/core';
 import { stagger, trigger, style, animate, AnimationBuilder, query, transition } from '@angular/animations';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -65,6 +65,17 @@ const getAnimation = (selector, time) => {
   ]
 })
 export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
+  @ViewChild('chapter1') chapter1;
+  @ViewChild('chapter2') chapter2;
+  @ViewChild('chapter3') chapter3;
+  @ViewChild('chapter4') chapter4;
+  @ViewChild('chapter5') chapter5;
+  @ViewChild('chapter6') chapter6;
+  @ViewChild('chapter7') chapter7;
+  @ViewChild('chapter8') chapter8;
+  @ViewChild('chapter9') chapter9;
+  @ViewChild('chapter10') chapter10;
+  @ViewChild('chapter11') chapter11;
   name = 'Angular';
   animated = {};
   animatedDetails;
@@ -98,29 +109,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   updateRate = 10;
   startingStyle;
 
-  chapters = [{
-    title: 'Setting up Development Environment'
-  }, {
-    title: 'Building a Flashcard game using Angular'
-  }, {
-    title: 'Building a Personal SPA blog using Angular Router and Wordpress'
-  }, {
-    title: 'Building an Inventory application using Reactive Forms'
-  }, {
-    title: 'Building a PWA Survey Application using Angular Service Worker'
-  }, {
-    title: 'Building an Auditing application using Angular and Ionic'
-  }, {
-    title: 'Server Side Rendering our Personal SPA Blog using Angular Universal'
-  }, {
-    title: 'Building an enterprise portal using Nx, NgRx and Redux'
-  }, {
-    title: 'Building Multi-language NativeScript Application with Angular'
-  }, {
-    title: 'Building a Component library using Angular CDK and Angular Elements'
-  }, {
-    title: 'Testing Angular Application using Jasmine, Jest and Protractor'
-  }];
+  chapters = this.getChapters();
 
   topics = [{
     id: 1,
@@ -312,6 +301,44 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     this.inner = this.el.nativeElement.querySelector('.book-cover img');
     const container = this.el.nativeElement.querySelector('.book-cover');
     mouse.setOrigin(container);
+    this.chapters = this.getChapters();
+  }
+
+  getChapters() {
+    return [{
+      title: 'Setting up Development Environment',
+      about: this.chapter1,
+    }, {
+      title: 'Building a Flashcard game using Angular',
+      about: this.chapter2,
+    }, {
+      title: 'Building a Personal SPA blog using Angular Router and Wordpress',
+      about: this.chapter3,
+    }, {
+      title: 'Building an Inventory application using Reactive Forms',
+      about: this.chapter4,
+    }, {
+      title: 'Building a PWA Survey Application using Angular Service Worker',
+      about: this.chapter5,
+    }, {
+      title: 'Building an Auditing application using Angular and Ionic',
+      about: this.chapter6,
+    }, {
+      title: 'Server Side Rendering our Personal SPA Blog using Angular Universal',
+      about: this.chapter7,
+    }, {
+      title: 'Building an enterprise portal using Nx, NgRx and Redux',
+      about: this.chapter8,
+    }, {
+      title: 'Building Multi-language NativeScript Application with Angular',
+      about: this.chapter9,
+    }, {
+      title: 'Building a Component library using Angular CDK and Angular Elements',
+      about: this.chapter10,
+    }, {
+      title: 'Testing Angular Application using Jasmine, Jest and Protractor',
+      about: this.chapter11,
+    }];
   }
 
   ngOnDestroy() {
