@@ -115,11 +115,11 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   }, {
     title: 'Building an enterprise portal using Nx, NgRx and Redux'
   }, {
-    title: 'Building cross-platform image processing app using NativeScript and Firebase MLkit'
+    title: 'Building Multi-language NativeScript Application with Angular'
   }, {
-    title: 'Building a Component library using Angular CLI and CDK'
+    title: 'Building a Component library using Angular CDK and Angular Elements'
   }, {
-    title: 'Testing Angular Application using Jasmine and Jest'
+    title: 'Testing Angular Application using Jasmine, Jest and Protractor'
   }];
 
   topics = [{
@@ -249,7 +249,8 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     title: 'Jest'
   }, {
     id: 31,
-    title: 'Bundle Analyzers'
+    logo: 'assets/bootstrap.svg',
+    title: 'Bootstrap'
   }];
 
   isTimeToUpdate = () => {

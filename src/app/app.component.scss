@@ -16,7 +16,8 @@
 
 .buttons button {
   flex: 1;
-  font-size: 18px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .book {
@@ -90,6 +91,8 @@ nav a {
 .title {
   font-size: 14px;
   margin-right: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .round-img {
@@ -139,7 +142,9 @@ nav .right {
 .orange {
   color: #e7692c;
 }
-
+.red {
+  color: #c30f2f;
+}
 .landing-title.is-size-1 {
   margin-top: 0;
 }
@@ -223,8 +228,8 @@ blockquote:before {
 }
 
 .quote:hover {
-  box-shadow: none;
-  border: 1px solid #e7692c;
+  background: #e7692c;
+  color: white;
 }
 
 .details {
@@ -359,6 +364,7 @@ blockquote:before {
   width: 300px;
   line-height: 20px;
   font-size: 14px!important;
+  display: none;
 }
 
 [data-tooltip]:hover:after {
@@ -376,11 +382,8 @@ blockquote:before {
   }
 }
 
+.recommendations,
 .chapters {
-  padding-bottom: 0;
-}
-
-.recommendations {
   margin-top: 0;
   padding-bottom: 0;
 }
@@ -425,4 +428,22 @@ blockquote:before {
     font-size: 2.8em;
     line-height: 0.5;
   }
+
+  [data-tooltip]:after {
+    display: block;
+  }
+}
+
+.quote .round-img {
+  margin-bottom: 10px;
+}
+
+.tool-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+ol {
+  line-height: 24px;
 }
