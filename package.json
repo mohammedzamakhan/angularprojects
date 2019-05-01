@@ -12,7 +12,7 @@
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:prerender": "npm run build:client-and-server-bundles && npm run compile:server && npm run prerender",
-    "build:client-and-server-bundles": "ng build --prod --base-href=/angularprojects/ && ng run angularprojects:server:production",
+    "build:client-and-server-bundles": "ng build --prod && ng run angularprojects:server:production",
     "prerender": "cd dist/ && node prerender"
   },
   "private": true,
