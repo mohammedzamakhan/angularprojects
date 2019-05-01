@@ -2,6 +2,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   mode: 'none',
@@ -15,6 +16,9 @@ module.exports = {
   optimization: {
     minimize: false
   },
+  externals: [
+    nodeExternals()
+  ],
   output: {
     // Puts the output at the root of the dist folder
     path: path.join(__dirname, 'dist'),

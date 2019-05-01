@@ -3,6 +3,19 @@ import 'zone.js/dist/zone-node';
 import 'reflect-metadata';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { join } from 'path';
+const minify = require('html-minifier').minify;
+const MINIFY_OPTIONS = {
+  removeComments: true,
+  removeCommentsFromCDATA: true,
+  collapseWhitespace: true,
+  collapseBooleanAttributes: true,
+  removeRedundantAttributes: true,
+  useShortDoctype: true,
+  removeEmptyAttributes: true,
+  minifyCSS: true,
+  removeAttributeQuotes: false,
+  removeOptionalTags: false,
+}
 
 import { enableProdMode } from '@angular/core';
 // Faster server renders w/ Prod mode (dev mode never needed)
@@ -45,8 +58,9 @@ function main() {
         provideModuleMap(LAZY_MODULE_MAP)
       ]
     })).then(html => {
-        console.log(html);
-        writeFileSync(join(fullPath, 'index.html'), html)
+        const minifiedHtml = minify(html, MINIFY_OPTIONS);
+
+        writeFileSync(join(fullPath, 'index.html'), minifiedHtml);
     });
   });
 

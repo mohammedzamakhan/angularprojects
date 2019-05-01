@@ -285,13 +285,14 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
 
     if (isPlatformBrowser(this.platformId)) {
       window.addEventListener('scroll', this.scrollEvent, true);
-    }
-    const colors = ['#e7692c', '#df002a', '#112b39'];
-    const blobs = document.querySelectorAll('#background path');
+      const colors = ['#e7692c', '#df002a', '#112b39'];
+      const blobs = document.querySelectorAll('#background path');
 
-    blobs.forEach((blob: any) => {
-      blob.style.fill = colors[Math.floor(Math.random() * colors.length)];
-    });
+      blobs.forEach((blob: any) => {
+        blob.style.fill = colors[Math.floor(Math.random() * colors.length)];
+      });
+    }
+
   }
 
   ngAfterViewInit() {
