@@ -35,6 +35,9 @@ MIT
 @angular/platform-browser
 MIT
 
+ngx-lazy-load-images
+MIT
+
 rxjs
 Apache-2.0
                                Apache License
