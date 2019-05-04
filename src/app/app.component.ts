@@ -1,4 +1,4 @@
-import { Component, ElementRef, Inject, PLATFORM_ID, OnInit, OnDestroy, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, PLATFORM_ID, OnInit, OnDestroy, AfterViewInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { stagger, trigger, style, animate, AnimationBuilder, query, transition } from '@angular/animations';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -277,7 +277,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   };
 
-  constructor(private el: ElementRef, private animationBuilder: AnimationBuilder, @Inject(PLATFORM_ID) private platformId) {
+  constructor(private el: ElementRef, private animationBuilder: AnimationBuilder, @Inject(PLATFORM_ID) private platformId, private cdr: ChangeDetectorRef) {
 
   }
 
