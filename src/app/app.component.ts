@@ -80,7 +80,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   animated = {};
   animatedDetails;
   animation = {
-    '.chapters .book-cover img': {
+    '.chapters .book-cover': {
       tag: '.chapter',
       duration: 250
     },
@@ -276,6 +276,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
       this.update(event);
     }
   };
+  bookFlip: boolean;
 
   constructor(private el: ElementRef, private animationBuilder: AnimationBuilder, @Inject(PLATFORM_ID) private platformId, private cdr: ChangeDetectorRef) {
 
@@ -400,6 +401,11 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     }, 600);
 
     animation.create(this.el.nativeElement).play();
+    this.cdr.detectChanges();
+  }
+
+  toggleBook() {
+    this.bookFlip = !this.bookFlip;
     this.cdr.detectChanges();
   }
 

@@ -279,22 +279,42 @@
             *ngFor="let chapter of chapters.slice(0, 6); let i = index">
             <div class="number light-gray">{{ i + 1 }}</div>
             <h3 class="title is-size-5">{{ chapter.title }}</h3>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" stroke="#e7692c" width="15px" height="12px" viewBox="0 0 22 16"><g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M1 8h20M14 1l7 7-7 7"/></g></svg>
+            </div>
             <div class="sr-only">
               <ng-container *ngTemplateOutlet="chapter.about"></ng-container>
             </div>
           </div>
         </div>
-        <div class="flex-1 book-cover" (mouseenter)="onMouseEnterHandler($event)" (mouseleave)="onMouseLeaveHandler()"
-          (mousemove)="onMouseMoveHandler($event)">
-          <img
+        <div class="flex-1 book-cover">
+          <!-- <img
             data-src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9781789536645_cover.png"
-            alt="" />
+            alt="" /> -->
+            <div class="bk-list">
+                <li>
+                  <div class="bk-book book-1 bk-bookdefault" (click)="toggleBook()" [ngClass]="{'bk-bookdefault': !bookFlip, 'bk-viewback': bookFlip}">
+                    <div class="bk-front">
+                      <div class="bk-cover-back"></div>
+                      <div class="bk-cover"></div>
+                    </div>
+                    <div class="bk-back"></div>
+                    <div class="bk-right"></div>
+                    <div class="bk-left"></div>
+                    <div class="bk-top"></div>
+                    <div class="bk-bottom"></div>
+                  </div>
+                </li>
+              </div>
         </div>
         <div class="flex-1 right">
           <div (click)="toFullScreen($event, chapter)" class="chapter" [ngClass]="'chapter' + (i + 6)"
             *ngFor="let chapter of chapters.slice(6); let i = index">
             <div class="number light-gray">{{ i + 7 }}</div>
             <h3 class="title">{{ chapter.title }}</h3>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" stroke="#e7692c" width="15px" height="12px" viewBox="0 0 22 16"><g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M1 8h20M14 1l7 7-7 7"/></g></svg>
+            </div>
             <div class="sr-only">
               <ng-container *ngTemplateOutlet="chapter.about"></ng-container>
             </div>
