@@ -303,6 +303,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     const container = this.el.nativeElement.querySelector('.book-cover');
     mouse.setOrigin(container);
     this.chapters = this.getChapters();
+    this.cdr.detectChanges();
   }
 
   getChapters() {
@@ -378,6 +379,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     }, 600);
 
     animation.create(this.el.nativeElement).play();
+    this.cdr.detectChanges();
   }
 
   closeDetails() {
@@ -398,6 +400,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     }, 600);
 
     animation.create(this.el.nativeElement).play();
+    this.cdr.detectChanges();
   }
 
   scrollEvent = (): void => {
