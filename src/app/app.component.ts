@@ -2,33 +2,6 @@ import { Component, ElementRef, Inject, PLATFORM_ID, OnInit, OnDestroy, AfterVie
 import { stagger, trigger, style, animate, AnimationBuilder, query, transition } from '@angular/animations';
 import { isPlatformBrowser } from '@angular/common';
 
-function checkVisible(elm) {
-  const rect = elm.getBoundingClientRect();
-  const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-  return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
-}
-
-// Mouse
-const mouse = {
-  _x: 0,
-  _y: 0,
-  x: 0,
-  y: 0,
-  updatePosition(event) {
-    // tslint:disable-next-line
-    const e = event || window.event;
-    this.x = e.clientX - this._x;
-    this.y = (e.clientY - this._y) * -1;
-  },
-  setOrigin(e) {
-    this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
-    this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
-  },
-  show() {
-    return '(' + this.x + ', ' + this.y + ')';
-  }
-};
-
 export const postsAnimation = query('.chapter', [
   style({ transform: 'translateY(100%)', opacity: 0 }),
   stagger(200, [
@@ -64,7 +37,7 @@ const getAnimation = (selector, time) => {
     ])
   ]
 })
-export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('chapter1') chapter1;
   @ViewChild('chapter2') chapter2;
   @ViewChild('chapter3') chapter3;
@@ -102,7 +75,6 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
       duration: 250
     }
   };
-  inner;
   selectedChapter: any = {};
 
   counter = 0;
@@ -242,40 +214,6 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     title: 'Bootstrap'
   }];
 
-  isTimeToUpdate = () => {
-    return this.counter++ % this.updateRate === 0;
-  }
-
-  update = function(event) {
-    mouse.updatePosition(event);
-    this.updateTransformStyle(
-      (mouse.y / this.inner.offsetHeight / 2).toFixed(2),
-      (mouse.x / this.inner.offsetWidth / 2).toFixed(2)
-    );
-  };
-
-  updateTransformStyle = function(x, y) {
-    const styled = 'rotateX(' + x + 'deg) rotateY(' + y + 'deg)';
-    this.inner.style.transform = styled;
-    this.inner.style.webkitTransform = styled;
-    this.inner.style.mozTransform = styled;
-    this.inner.style.msTransform = styled;
-    this.inner.style.oTransform = styled;
-  };
-
-  onMouseEnterHandler = function(event) {
-    this.update(event);
-  };
-
-  onMouseLeaveHandler = function() {
-    this.inner.style = '';
-  };
-
-  onMouseMoveHandler = function(event) {
-    if (this.isTimeToUpdate()) {
-      this.update(event);
-    }
-  };
   bookFlip: boolean;
 
   constructor(private el: ElementRef, private animationBuilder: AnimationBuilder, @Inject(PLATFORM_ID) private platformId, private cdr: ChangeDetectorRef) {
@@ -285,7 +223,8 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   ngOnInit() {
 
     if (isPlatformBrowser(this.platformId)) {
-      window.addEventListener('scroll', this.scrollEvent, true);
+      this.initAnimation();
+      // window.addEventListener('scroll', this.scrollEvent, true);
       const colors = ['#e7692c', '#df002a', '#112b39'];
       const blobs = document.querySelectorAll('#background path');
 
@@ -297,12 +236,6 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.scrollEvent();
-    }
-    this.inner = this.el.nativeElement.querySelector('.book-cover img');
-    const container = this.el.nativeElement.querySelector('.book-cover');
-    mouse.setOrigin(container);
     this.chapters = this.getChapters();
     this.cdr.detectChanges();
   }
@@ -342,12 +275,6 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
       title: 'Testing Angular Application using Jasmine, Jest and Protractor',
       about: this.chapter11,
     }];
-  }
-
-  ngOnDestroy() {
-    if (isPlatformBrowser(this.platformId)) {
-      window.removeEventListener('scroll', this.scrollEvent, true);
-    }
   }
 
   buildAnimation(selector, time = 500) {
@@ -409,14 +336,19 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     this.cdr.detectChanges();
   }
 
-  scrollEvent = (): void => {
-    Object.keys(this.animation).forEach((key) => {
-      const isVisible = checkVisible(this.el.nativeElement.querySelector(key));
-      if (isVisible && !this.animated[key]) {
-        this.animated[key] = true;
-        const animation = this.buildAnimation(this.animation[key].tag, this.animation[key].duration);
-        animation.create(this.el.nativeElement).play();
-      }
+  initAnimation = () => {
+    Object.keys(this.animation).forEach(key => {
+      const observer = new IntersectionObserver((entries) => {
+        const entry = entries[entries.length - 1];
+        if (entry.intersectionRatio > 0.5 && !this.animated[key]) {
+          this.animated[key] = true;
+          const animation = this.buildAnimation(this.animation[key].tag, this.animation[key].duration);
+          animation.create(this.el.nativeElement).play();
+        }
+      }, {
+        threshold: [0, 0.25, 0.5, 0.75, 1]
+      });
+      observer.observe(document.querySelector(key));
     });
   }
 }

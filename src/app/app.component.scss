@@ -66,6 +66,11 @@ nav a {
   order: -1;
   text-align: center;
   perspective: 100px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: url(/assets/tap.png), auto;
 }
 
 .packt-publishing img {
@@ -861,3 +866,13 @@ ol {
 	font-weight: 700;
 }
 
+.chapter,
+.recommendations .container .flex-1,
+.benefit,
+.topics .flex-1,
+.justify-content-center img,
+.author .author-animation
+{
+  transform: translateY(100%);
+  opacity: 0;
+}
