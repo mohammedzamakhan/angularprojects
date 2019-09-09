@@ -38,17 +38,17 @@ const getAnimation = (selector, time) => {
   ]
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  @ViewChild('chapter1') chapter1;
-  @ViewChild('chapter2') chapter2;
-  @ViewChild('chapter3') chapter3;
-  @ViewChild('chapter4') chapter4;
-  @ViewChild('chapter5') chapter5;
-  @ViewChild('chapter6') chapter6;
-  @ViewChild('chapter7') chapter7;
-  @ViewChild('chapter8') chapter8;
-  @ViewChild('chapter9') chapter9;
-  @ViewChild('chapter10') chapter10;
-  @ViewChild('chapter11') chapter11;
+  @ViewChild('chapter1', { static: true }) chapter1;
+  @ViewChild('chapter2', { static: true }) chapter2;
+  @ViewChild('chapter3', { static: true }) chapter3;
+  @ViewChild('chapter4', { static: true }) chapter4;
+  @ViewChild('chapter5', { static: true }) chapter5;
+  @ViewChild('chapter6', { static: true }) chapter6;
+  @ViewChild('chapter7', { static: true }) chapter7;
+  @ViewChild('chapter8', { static: true }) chapter8;
+  @ViewChild('chapter9', { static: true }) chapter9;
+  @ViewChild('chapter10', { static: true }) chapter10;
+  @ViewChild('chapter11', { static: true }) chapter11;
   name = 'Angular';
   animated = {};
   animatedDetails;
