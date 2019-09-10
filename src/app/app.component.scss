@@ -29,6 +29,8 @@
   width: 63px;
   margin-right: 20px;
   height: 25px;
+  position: relative;
+  top: 3px;
 }
 
 .about {
@@ -201,7 +203,7 @@ nav .right {
 
 .logo-title {
   position: relative;
-  top: -3px;
+  top: -1px;
   margin: 0;
   width: 100%;
 }
