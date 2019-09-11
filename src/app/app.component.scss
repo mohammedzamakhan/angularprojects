@@ -799,15 +799,15 @@ ol {
 .book-1 .bk-back,
 .book-1 .bk-left,
 .book-1 .bk-front:after {
-	background-color: #2d3039;
+	background-color: #f06e23;
   cursor: pointer;
 }
 
 .book-1 .bk-cover {
-	// background-image: url(http://3.bp.blogspot.com/-zTDM2fcUxfA/UmvkjFkS_OI/AAAAAAAABwg/lzPaVpz3LvY/s1600/8207OT_Cover_PreFinal.jpg);
+	background-image: url(/assets/angularprojects-cover.png);
   background-size: 632px;
 	background-repeat: no-repeat;
-      background-position: -332px 2px;
+      background-position: -332px 0px;
 }
 
 .book-1 .bk-cover h2 {
@@ -843,9 +843,9 @@ ol {
 }
 
 .book-1 .bk-left {
-  // background-image: url(http://3.bp.blogspot.com/-zTDM2fcUxfA/UmvkjFkS_OI/AAAAAAAABwg/lzPaVpz3LvY/s1600/8207OT_Cover_PreFinal.jpg);
+  background-image: url(/assets/angularprojects-cover.png);
   background-size: 632px;
-  background-position: 335px 2px;
+  background-position: 335px 0px;
 }
 .book-1 .bk-left h2 {
 	color: #fff;
@@ -856,9 +856,9 @@ ol {
 }
 
 .book-1 .bk-back {
-  // background-image: url(http://3.bp.blogspot.com/-zTDM2fcUxfA/UmvkjFkS_OI/AAAAAAAABwg/lzPaVpz3LvY/s1600/8207OT_Cover_PreFinal.jpg);
+  background-image: url(/assets/angularprojects-cover.png);
   background-size: 632px;
-  background-position-y: 2px;
+  background-position-y: 0px;
 }
 .book-1 .bk-back p {
 	color: #fff;
