@@ -87,7 +87,7 @@ nav a {
 
 .chapter:hover {
   box-shadow: 0 10px 25px 0 rgba(116, 103, 91, 0.3);
-  background: #e7692c;
+  background: #ec6611;
   color: white;
 
   svg {
@@ -155,7 +155,7 @@ nav .right {
   margin-left: 10px;
 }
 .orange {
-  color: #e7692c;
+  color: #ec6611;
 }
 .red {
   color: #c30f2f;
@@ -171,7 +171,7 @@ nav .right {
   width: 35px;
   height: 2px;
   display: inherit;
-  background-color: #e7692c;
+  background-color: #ec6611;
   content: "";
   left: 50%;
   margin-top: 17px;
@@ -183,7 +183,7 @@ nav .right {
 }
 
 .orange-bg {
-  background: #e7692c;
+  background: #ec6611;
   color: white;
   margin-top: 0;
 }
@@ -244,7 +244,7 @@ blockquote:before {
 }
 
 .quote:hover {
-  background: #e7692c;
+  background: #ec6611;
   color: white;
 }
 
@@ -252,7 +252,7 @@ blockquote:before {
   display: none;
   position: fixed;
   overflow: hidden;
-  background: #e7692c;
+  background: #ec6611;
   color: white;
   z-index: 1;
 }
@@ -366,7 +366,7 @@ blockquote:before {
 [data-tooltip]:after {
   opacity: 0;
   pointer-events: none;
-  background: #e7692c;
+  background: #ec6611;
   border-radius: 4px;
   color: #fff;
   content: attr(data-tooltip);

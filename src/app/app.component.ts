@@ -225,7 +225,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     if (isPlatformBrowser(this.platformId)) {
       this.initAnimation();
       // window.addEventListener('scroll', this.scrollEvent, true);
-      const colors = ['#e7692c', '#df002a', '#112b39'];
+      const colors = ['#ec6611', '#df002a', '#112b39'];
       const blobs = document.querySelectorAll('#background path');
 
       blobs.forEach((blob: any) => {
