@@ -57,19 +57,19 @@ export class AppComponent implements OnInit, AfterViewInit {
       tag: '.chapter',
       duration: 250
     },
-    '.recommendations .container': {
-      tag: '.recommendations .container .flex-1'
-    },
+    // '.recommendations .container': {
+    //   tag: '.recommendations .container .flex-1'
+    // },
     '.benefits .anim': {
       tag: '.benefit'
     },
     '.topics': {
       tag: '.topics .flex-1', duration: 150
     },
-    '.justify-content-center': {
-      tag: '.justify-content-center img',
-      duration: 50
-    },
+    // '.justify-content-center': {
+    //   tag: '.justify-content-center img',
+    //   duration: 50
+    // },
     '.author': {
       tag: '.author .author-animation',
       duration: 250
@@ -242,34 +242,34 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   getChapters() {
     return [{
-      title: 'Setting up Development Environment',
+      title: 'Setting Up the Development Environment',
       about: this.chapter1,
     }, {
-      title: 'Building a Flashcard game using Angular',
+      title: 'Building a Flashcard Game using Angular',
       about: this.chapter2,
     }, {
-      title: 'Building a Personal SPA blog using Angular Router and Wordpress',
+      title: 'Building a Personal Blog Using Angular Router and WordPress',
       about: this.chapter3,
     }, {
-      title: 'Building an Inventory application using Reactive Forms',
+      title: 'Building an Inventory Application Using Reactive Forms',
       about: this.chapter4,
     }, {
-      title: 'Building a PWA Survey Application using Angular Service Worker',
+      title: 'Building a PWA E-Commerce Application Using Angular Service Worker',
       about: this.chapter5,
     }, {
       title: 'Building an Auditing application using Angular and Ionic',
       about: this.chapter6,
     }, {
-      title: 'Server Side Rendering our Personal SPA Blog using Angular Universal',
+      title: 'Building a Server-Side Rendering Application Using Angular',
       about: this.chapter7,
     }, {
-      title: 'Building an enterprise portal using Nx, NgRx and Redux',
+      title: 'Building an Enterprise Portal Using Nx, NgRx, and Redux',
       about: this.chapter8,
     }, {
       title: 'Building Multi-language NativeScript Application with Angular',
       about: this.chapter9,
     }, {
-      title: 'Building a Component library using Angular CDK and Angular Elements',
+      title: 'Building a Component Library Using Angular CDK and Elements',
       about: this.chapter10,
     }, {
       title: 'Testing Angular Application using Jasmine, Jest and Protractor',
@@ -350,5 +350,9 @@ export class AppComponent implements OnInit, AfterViewInit {
       });
       observer.observe(document.querySelector(key));
     });
+  }
+
+  buy(e) {
+    alert('Not yet available');
   }
 }
