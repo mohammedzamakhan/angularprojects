@@ -210,6 +210,8 @@ nav .right {
 
 nav .left {
   display: flex;
+  width: 100%;
+
 }
 
 section {
@@ -448,6 +450,10 @@ blockquote:before {
 
   [data-tooltip]:after {
     display: block;
+  }
+
+  nav .left {
+    width: auto;
   }
 }
 
@@ -871,7 +877,6 @@ ol {
 .chapter,
 .recommendations .container .flex-1,
 .benefit,
-.topics .flex-1,
 .justify-content-center img,
 .author .author-animation
 {

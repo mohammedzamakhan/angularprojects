@@ -63,9 +63,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     '.benefits .anim': {
       tag: '.benefit'
     },
-    '.topics': {
-      tag: '.topics .flex-1', duration: 150
-    },
+    // '.topics': {
+    //   tag: '.topics .flex-1', duration: 150
+    // },
     // '.justify-content-center': {
     //   tag: '.justify-content-center img',
     //   duration: 50
