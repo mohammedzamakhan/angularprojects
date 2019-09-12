@@ -297,7 +297,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     const animation = this.animationBuilder.build([
       query('.details', [
         style(this.startingStyle),
-        animate('.6s cubic-bezier(0.25, 0.8, 0.25, 1)', style({ top: 0, width: '100vw', height: '100vh', left: 0, borderRadius: 0 }))
+        animate('.6s cubic-bezier(0.25, 0.8, 0.25, 1)', style({ top: 0, width: '100vw', height: '100vh', left: 0, borderTopLeftRadius: 0, borderTopRightRadius: 0, borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }))
       ])
     ]);
     this.animatedDetails = true;
@@ -315,8 +315,8 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     const animation = this.animationBuilder.build([
       query('.details', [
-        style({ top: 0, width: '100vw', height: '100vh', left: 0, borderRadius: 0 }),
-        animate('.6s ease', style({ ...this.startingStyle, borderRadius: '6px' }))
+        style({ top: 0, width: '100vw', height: '100vh', left: 0, borderTopLeftRadius: 0, borderTopRightRadius: 0, borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }),
+        animate('.6s ease', style({ ...this.startingStyle, borderTopLeftRadius: '6px', borderTopRightRadius: '6px', borderBottomLeftRadius: '6px', borderBottomRightRadius: '6px' }))
       ])
     ]);
     details.classList.remove('animated');
