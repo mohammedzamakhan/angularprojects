@@ -14,10 +14,12 @@
   display: flex;
 }
 
-.buttons button {
+.buttons a {
   flex: 1;
   font-size: 16px;
   cursor: pointer;
+  color: white;
+  text-align: center;
 }
 
 .book {
@@ -293,6 +295,8 @@ blockquote:before {
   position: absolute;
   right: 0;
   display: none;
+  border: none;
+  cursor: pointer;
 }
 
 .animated .close-btn {
@@ -898,5 +902,12 @@ ol {
     width: 60px;
     top: unset;
     right: -53px;
+  }
+}
+
+.margin-top {
+  margin-top: 20px;
+  img {
+    margin-right: 20px;
   }
 }

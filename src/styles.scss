@@ -76,7 +76,7 @@ nav {
   margin: 0;
 }
 
-button {
+a.packt-btn, a.button {
   background: #ffa724;
   border: none;
   padding: 10px 20px;
@@ -86,11 +86,11 @@ button {
   color: #fff;
 }
 
-button:hover {
+a:hover {
     background: #db9834;
 }
 
-.packt-btn {
+a.packt-btn {
   background: #ec6611;
 }
 
