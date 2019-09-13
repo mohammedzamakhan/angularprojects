@@ -1,4 +1,4 @@
-<div>
+<div appLazyLoadImage>
   <nav>
     <div class="container">
       <div class="left">
@@ -253,14 +253,15 @@
     </h2>
     <div class="packt-publishing">
       A Packt Publishing book by
-      <div class="round-img small-img">
-        <picture>
-          <source srcset="assets/zama_large.webp" type="image/webp" />
-          <source srcset="assets/zama_large.jpeg" type="image/jpeg" />
-          <img loading="lazy" src="assets/zama_large.jpeg" alt="Zama Khan Mohammed" />
-        </picture>
-      </div>
-      <div>Zama Khan Mohammed</div>
+
+        <div class="round-img small-img">
+          <picture>
+            <source srcset="assets/zama_large.webp" type="image/webp" />
+            <source srcset="assets/zama_large.jpeg" type="image/jpeg" />
+            <a target="_blank" href="https://twitter.com/mohamedzamakhan"><img loading="lazy" src="assets/zama_large.jpeg" alt="Zama Khan Mohammed" /></a>
+          </picture>
+        </div>
+        <a target="_blank" href="https://twitter.com/mohamedzamakhan"><div>Zama Khan Mohammed</div></a>
     </div>
   </main>
   <main class="flex-row container">
@@ -289,10 +290,10 @@
         writing code and building actual apps, you'll quickly build your Angular
         knowledge and use the framework with confidence.
         <br />
-        - <b>Minko Gechev</b>
+        - <a target="_blank" href="https://twitter.com/mgechev"><b>Minko Gechev, Angular Team Member at Google</b></a>
         <div class="round-img small-img">
           <picture>
-            <img loading="lazy" src="/assets/minko.jpg" alt="Minko Gechev" />
+            <a target="_blank" href="https://twitter.com/mgechev"><img loading="lazy" src="/assets/minko.jpg" alt="Minko Gechev" /></a>
           </picture>
         </div>
       </div>
@@ -312,12 +313,12 @@
     <div class="flex-1">
       <h3 class="is-size-3 text-center">Become a Angular expert today.</h3>
       <div class="buttons">
-        <a
+        <a target="_blank"
           href="https://www.amazon.com/Angular-Projects-real-world-applications-TypeScript-ebook/dp/B07XLKCZMJ/ref=mp_s_a_1_8?keywords=angular+projects&qid=1568371721&sprefix=angular+proje&sr=8-8"
           class="packt-btn"
           >Buy on Packt</a
         >
-        <a
+        <a target="_blank"
           href="https://www.packtpub.com/web-development/angular-projects"
           class="button button--naira button--round-s button--border-thin"
         >
@@ -529,8 +530,8 @@
           [attr.data-tooltip]="topic.desc || topic.title"
           *ngFor="let topic of topics"
         >
-          <img loading="lazy"
-            [attr.src]="topic.logo"
+          <img
+            [attr.data-src]="topic.logo"
             [alt]="topic.title"
             *ngIf="topic.logo"
           />
@@ -690,7 +691,7 @@
   </section> -->
 
   <section class="text-center orange-bg" id="contact">
-    <a href="https://twitter.com/mohamedzamakhan">
+    <a target="_blank" href="https://twitter.com/mohamedzamakhan">
       <h2 class="is-size-1">
         Questions? <br />
         Shoot me a quick tweet & <br />
@@ -717,13 +718,13 @@
     <div class="text-center container">
       <div>
           I dedicate this book to my family, my wife, my parents, and my son, who was born during
-          the writing process. I would also like to give a special dedication to my friends <a href="https://www.linkedin.com/in/saadather/">Saad Ather</a>,
-          <a href="https://www.linkedin.com/in/aijazkhan81/">Mohammed Abdul Kareem</a>, and <a href="https://www.linkedin.com/in/ruman-ul-hassan-7aa19828/">Ruman ul Hassan</a>, who kept me motivated and helped me
+          the writing process. I would also like to give a special dedication to my friends <a target="_blank" href="https://www.linkedin.com/in/saadather/">Saad Ather</a>,
+          <a target="_blank" href="https://www.linkedin.com/in/aijazkhan81/">Mohammed Abdul Kareem</a>, and <a target="_blank" href="https://www.linkedin.com/in/ruman-ul-hassan-7aa19828/">Ruman ul Hassan</a>, who kept me motivated and helped me
           along the way.
       </div>
       <div class="margin-top">
         <img loading="lazy" style="position: relative; top: 5px;" src="https://www.tekzenit.com/styles/images/logo@2x.png" alt="Tekzenit Inc" width="133" height="25" >
-        <a href="https://www.tekzenit.com/">Tekzenit Inc.</a> - all my colleagues
+        <a target="_blank" href="https://www.tekzenit.com/">Tekzenit Inc.</a> - all my colleagues
       </div>
       <div class="margin-top">
         <img loading="lazy"
@@ -734,7 +735,7 @@
           height="48"
         />
         Momentum UI Design Team.
-        <a href="https://momentum.design/">https://momentum.design/</a>
+        <a target="_blank" href="https://momentum.design/">https://momentum.design/</a>
       </div>
       <div class="margin-top">
         <img loading="lazy"
