@@ -59,7 +59,6 @@ function main() {
       ]
     })).then(html => {
         let minifiedHtml = minify(html, MINIFY_OPTIONS);
-        minifiedHtml = minifiedHtml.replace(/<script src="polyfills-es2015.([a-z0-9]{5,20}).js" type="module"><\/script>/g, '')
         writeFileSync(join(fullPath, 'index.html'), minifiedHtml);
     });
   });
