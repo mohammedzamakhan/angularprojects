@@ -74,6 +74,9 @@ nav {
   background: #ec6611;
   color: white;
   margin: 0;
+  a {
+    text-decoration: none;
+  }
 }
 
 a.packt-btn, a.button {
@@ -87,7 +90,7 @@ a.packt-btn, a.button {
 }
 
 a:hover {
-    background: #db9834;
+    background: #ec6611;
     color: white;
 }
 
@@ -163,8 +166,7 @@ ul {
 }
 
 a {
-	color: #2c3e50;
-	text-decoration: none;
+	color: #ec6611;
 }
 
 .btn {
